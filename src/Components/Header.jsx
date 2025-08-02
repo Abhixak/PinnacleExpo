@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+  FaArrowRight,
   FaPhoneAlt,
   FaWhatsapp,
   FaFacebookF,
@@ -77,36 +78,75 @@ const Header = () => {
           />
         </div>
 
-        {/* Hamburger Icon */}
-        <div className="md:hidden z-50">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-green-900 focus:outline-none"
-          >
-            <svg
-              className="w-8 h-8"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+        {/* Menu Button Section */}
+        {!isOpen ? (
+          // Hamburger Button (when menu is closed)
+          <div className="md:hidden z-50">
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-green-900 focus:outline-none"
             >
-              {isOpen ? (
-                <>
-                  <path d="M6 18L18 6" />
-                  <path d="M6 6l12 12" />
-                </>
-              ) : (
-                <>
-                  <path d="M4 6h16" />
-                  <path d="M4 12h16" />
-                  <path d="M4 18h16" />
-                </>
-              )}
-            </svg>
-          </button>
-        </div>
+              <svg
+                className="w-8 h-8"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {/* Top Line */}
+                <motion.path
+                  d="M4 6h16"
+                  variants={{
+                    closed: { d: "M4 6h16", rotate: 0, y: 0 },
+                    open: { d: "M6 18L18 6", rotate: 45, y: 6 },
+                  }}
+                  animate="closed"
+                  transition={{ duration: 0.3 }}
+                />
+
+                {/* Middle Line */}
+                <motion.path
+                  d="M4 12h16"
+                  variants={{
+                    closed: { opacity: 1 },
+                    open: { opacity: 0 },
+                  }}
+                  animate="closed"
+                  transition={{ duration: 0.2 }}
+                />
+
+                {/* Bottom Line */}
+                <motion.path
+                  d="M4 18h16"
+                  variants={{
+                    closed: { d: "M4 18h16", rotate: 0, y: 0 },
+                    open: { d: "M6 6l12 12", rotate: -45, y: -6 },
+                  }}
+                  animate="closed"
+                  transition={{ duration: 0.3 }}
+                />
+              </svg>
+            </button>
+          </div>
+        ) : (
+          // Left Arrow Button (when menu is open)
+          <motion.div
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -30, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="absolute top-8 right-6 z-50 md:hidden"
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-green-900 focus:outline-none bg-white !p-2 rounded-full shadow"
+            >
+              <FaArrowRight className="w-6 h-6" />
+            </button>
+          </motion.div>
+        )}
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-lg text-gray-800 font-medium">

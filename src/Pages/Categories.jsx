@@ -3,6 +3,7 @@ import CategoryGrid from "../Components/CategoryGrid";
 import categories from "../data/categories";
 import productsData from "../data/products";
 import { IoClose } from "react-icons/io5";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Categories = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -38,23 +39,30 @@ const Categories = () => {
         </h3>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6 !mb-8 !py-4">
-          {visibleProducts.map((prod) => (
-            <div
-              key={prod.id}
-              onClick={() => setSelectedProduct(prod)} // 🆕 Set selected product
-              className="cursor-pointer bg-[#e6d8e9] rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out !p-4 flex flex-col items-center text-center"
-            >
-              <img
-                src={prod.image}
-                alt={prod.name}
-                className="w-24 h-24 object-cover !mb-3"
-              />
-              <h4 className="text-md font-semibold text-[#43655a] !mb-1">
-                {prod.name}
-              </h4>
-              <p className="text-sm text-[#324b4c]/70">{prod.description}</p>
-            </div>
-          ))}
+          <AnimatePresence>
+            {visibleProducts.map((prod) => (
+              <motion.div
+                key={prod.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                onClick={() => setSelectedProduct(prod)}
+                className="cursor-pointer bg-[#e6d8e9] rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out !p-4 flex flex-col items-center text-center"
+              >
+                <img
+                  src={prod.image}
+                  alt={prod.name}
+                  className="w-24 h-24 object-cover !mb-3"
+                />
+                <h4 className="text-md font-semibold text-[#43655a] !mb-1">
+                  {prod.name}
+                </h4>
+                <p className="text-sm text-[#324b4c]/70">{prod.description}</p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
 
         {visibleCount < filteredProducts.length && (
