@@ -129,9 +129,9 @@ const Header = () => {
               exit="exit"
               variants={menuVariants}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed top-0 right-0 w-64 h-full bg-white shadow-md !px-6 !py-8 z-40"
+              className="fixed top-0 right-0 w-64 h-full bg-white shadow-md !px-6 z-40"
             >
-              <ul className="flex flex-col gap-6 text-lg text-center text-green-700 space-y-6 !mt-16 text-gray-800 font-medium">
+              <ul className="flex flex-col gap-8 text-lg text-center text-green-700 space-y-6 !mt-[9em] text-gray-800 font-medium">
                 <li>
                   <a
                     href="#home"
