@@ -31,11 +31,15 @@ const Header = () => {
 
         {/* Right Side: Icons */}
         <div className="flex gap-4 items-center">
-          <a href="tel:+919999999999" className="text-sm text-green-300" title="Call">
+          <a
+            href="tel:+919216399808"
+            className="text-sm text-green-300"
+            title="Call"
+          >
             <FaPhoneAlt />
           </a>
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/+919216399808"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-400"
@@ -44,7 +48,7 @@ const Header = () => {
             <FaWhatsapp />
           </a>
           <a
-            href="https://www.facebook.com/YourPage"
+            href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400"
@@ -53,7 +57,7 @@ const Header = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://www.instagram.com/YourProfile"
+            href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-300"
@@ -131,7 +135,7 @@ const Header = () => {
               transition={{ type: "tween", duration: 0.3 }}
               className="fixed top-0 right-0 w-64 h-full bg-white shadow-md !px-6 z-40"
             >
-              <ul className="flex flex-col gap-8 text-lg text-center text-green-700 space-y-6 !mt-[9em] text-gray-800 font-medium">
+              <ul className="flex flex-col gap-8 text-xl text-center text-green-700 space-y-6 !mt-[8em] text-gray-800 font-medium">
                 <li>
                   <a
                     href="#home"
