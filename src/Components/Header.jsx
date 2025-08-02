@@ -37,7 +37,7 @@ const Header = () => {
             className="text-blue-500 flex items-center gap-1"
             title="Call"
           >
-            <FaPhoneAlt /> <span>+919216399808</span>
+            <FaPhoneAlt /> <span className="hidden sm:block">+919216399808</span>
           </a>
 
           <a
@@ -47,7 +47,7 @@ const Header = () => {
             className="text-green-400 flex items-center gap-1"
             title="WhatsApp"
           >
-            <FaWhatsapp /> <span>+919216399808</span>
+            <FaWhatsapp /> <span className="hidden sm:block">+919216399808</span>
           </a>
         </div>
       </section>
