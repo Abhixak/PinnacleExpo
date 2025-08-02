@@ -10,7 +10,7 @@ const Home = () => {
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat === selectedCategory ? null : cat);
-    setVisibleCount(15); // reset count on new selection
+    setVisibleCount(5); // reset count on new selection
   };
 
   const filteredProducts = selectedCategory
@@ -23,7 +23,7 @@ const Home = () => {
     <div className=" bg-[#fff5ff] text-slate-800 !px-4 !py-2">
       <Header />
 
-      <h2 className="text-2xl sm:text-3xl font-bold !my-8 text-[#005a34] text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold !mt-10 !mb-4 text-[#005a34] text-center">
         Categories
       </h2>
 
