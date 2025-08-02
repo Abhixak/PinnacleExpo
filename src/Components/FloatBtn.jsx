@@ -82,7 +82,7 @@ const FloatBtn = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                href="mailto:contact@example.com"
+                href="mailto:pinnacle.chd@gmail.com"
                 className="absolute bg-red-500 text-white !p-3 rounded-full shadow"
               >
                 <FaEnvelope />

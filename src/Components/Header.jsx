@@ -31,40 +31,23 @@ const Header = () => {
         </a>
 
         {/* Right Side: Icons */}
-        <div className="flex gap-4 items-center">
+        <div className="flex text-sm gap-6 items-center">
           <a
             href="tel:+919216399808"
-            className="text-sm text-green-300"
+            className="text-blue-500 flex items-center gap-1"
             title="Call"
           >
-            <FaPhoneAlt />
+            <FaPhoneAlt /> <span>+919216399808</span>
           </a>
+
           <a
-            href="https://wa.me/+919216399808"
+            href="https://wa.me/919216399808"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-400"
+            className="text-green-400 flex items-center gap-1"
             title="WhatsApp"
           >
-            <FaWhatsapp />
-          </a>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400"
-            title="Facebook"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-300"
-            title="Instagram"
-          >
-            <FaInstagram />
+            <FaWhatsapp /> <span>+919216399808</span>
           </a>
         </div>
       </section>
