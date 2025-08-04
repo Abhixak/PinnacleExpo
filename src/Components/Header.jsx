@@ -38,8 +38,8 @@ const Header = () => {
             className="text-blue-500 flex items-center gap-1"
             title="Call"
           >
-            <FaPhoneAlt />{" "}
-            <span className="hidden sm:block">+919216399808</span>
+            <FaPhoneAlt />
+            {/* <span className="hidden sm:block">+919216399808</span> */}
           </a>
 
           <a
@@ -64,9 +64,9 @@ const Header = () => {
           />
         </div>
         <p className="text-center text-sm sm:text-base text-green-600 drop-shadow-md max-w-xs mx-auto">
-  Reach out for Global Export Opportunities & Authorized Distributorships
-</p>
-
+          Reach out for Global Export Opportunities & Authorized
+          Distributorships
+        </p>
 
         {/* Menu Button Section */}
         {!isOpen ? (
