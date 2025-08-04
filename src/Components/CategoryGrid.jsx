@@ -38,7 +38,7 @@ const CategoryGrid = ({ categories, selectedCategory, onSelect }) => {
           ))}
       </div>
       {!selectedCategory && (
-        <div className="!mb-4 w-fit mx-auto !px-4 !py-2 rounded-full bg-yellow-100 text-yellow-800 font-medium shadow-sm border border-yellow-300 text-center animate-pulse">
+        <div className="!mb-4 w-fit !px-4 !py-2 rounded-full bg-yellow-100 text-yellow-800 font-medium shadow-sm border border-yellow-300 text-center animate-pulse">
           Click on any category to filter the products below
         </div>
       )}

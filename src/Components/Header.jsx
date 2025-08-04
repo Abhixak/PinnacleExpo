@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaArrowRight,
@@ -7,7 +8,6 @@ import {
   FaFacebookF,
   FaInstagram,
 } from "react-icons/fa";
-import contactImg from "../assets/contact.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +17,9 @@ const Header = () => {
     visible: { x: 0 },
     exit: { x: "100%" },
   };
+  const [showProductMenu, setShowProductMenu] = useState(false);
+  const location = useLocation();
+  const path = location.pathname + location.search;
 
   return (
     <>
@@ -143,18 +146,78 @@ const Header = () => {
           <img src={contactImg} className="h-20 absolute top-8 right-100" alt="contact Image" />
         </a> */}
         <nav className="hidden md:flex gap-6 text-lg text-gray-800 font-medium">
-          <a href="#home" className="hover:text-green-700">
+          <Link
+            to="/"
+            className={`hover:text-green-700 ${
+              location.pathname === "/"
+                ? "text-green-700 font-semibold underline"
+                : ""
+            }`}
+          >
             Home
-          </a>
-          <a href="#about" className="hover:text-green-700">
+          </Link>
+
+          <Link
+            to="/about"
+            className={`hover:text-green-700 ${
+              location.pathname === "/about"
+                ? "text-green-700 font-semibold underline"
+                : ""
+            }`}
+          >
             About
-          </a>
-          <a href="#products" className="hover:text-green-700">
-            Products
-          </a>
-          <a href="#contact" className="hover:text-green-700">
+          </Link>
+
+          <div className="relative group">
+            <a href="#products" className="hover:text-green-700">
+              Products
+            </a>
+            <div className="absolute hidden group-hover:flex flex-col bg-white shadow-md !py-2 rounded text-sm text-gray-800 min-w-[180px] z-50">
+              <Link
+                to="/products?item=indian-rice"
+                className={`!px-4 !py-2 hover:bg-gray-100 ${
+                  path === "/products?item=indian-rice"
+                    ? "bg-gray-100 text-green-700 font-semibold"
+                    : ""
+                }`}
+              >
+                Indian Rice
+              </Link>
+
+              <Link
+                to="/products?item=jasmine-rice"
+                className={`!px-4 !py-2 hover:bg-gray-100 ${
+                  path === "/products?item=jasmine-rice"
+                    ? "bg-gray-100 text-green-700 font-semibold"
+                    : ""
+                }`}
+              >
+                Jasmine Rice
+              </Link>
+
+              <Link
+                to="/products?item=engine-lubricants"
+                className={`!px-4 !py-2 hover:bg-gray-100 ${
+                  path === "/products?item=engine-lubricants"
+                    ? "bg-gray-100 text-green-700 font-semibold"
+                    : ""
+                }`}
+              >
+                Engine Lubricants
+              </Link>
+            </div>
+          </div>
+
+          <Link
+            to="/contact"
+            className={`hover:text-green-700 ${
+              location.pathname === "/contact"
+                ? "text-green-700 font-semibold underline"
+                : ""
+            }`}
+          >
             Contact Us
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Slide-in Menu */}
@@ -168,42 +231,109 @@ const Header = () => {
               transition={{ type: "tween", duration: 0.3 }}
               className="fixed top-0 right-0 w-64 h-full bg-white shadow-md !px-6 z-40"
             >
-              <ul className="flex flex-col gap-8 text-xl text-center text-green-700 space-y-6 !mt-[8em] text-gray-800 font-medium">
+              <ul className="flex flex-col gap-6 text-xl text-center text-green-700 !mt-[7em] text-gray-800 font-medium">
                 <li>
-                  <a
-                    href="#home"
+                  <Link
+                    to="/"
                     onClick={() => setIsOpen(false)}
-                    className="hover:underline"
+                    className={`text-lg !px-4 py-2 rounded ${
+                      location.pathname === "/"
+                        ? "text-green-700 font-bold underline"
+                        : "text-black"
+                    }`}
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#about"
+                  <Link
+                    to="/about"
                     onClick={() => setIsOpen(false)}
-                    className="hover:underline"
+                    className={`text-lg !px-4 py-2 rounded ${
+                      location.pathname === "/about"
+                        ? "text-green-700 font-bold underline"
+                        : "text-black"
+                    }`}
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
+
+                {/* Keep Products dropdown as-is for now */}
                 <li>
-                  <a
-                    href="#products"
-                    onClick={() => setIsOpen(false)}
-                    className="hover:underline"
+                  <button
+                    onClick={() => setShowProductMenu(!showProductMenu)}
+                    className="hover:underline text-green-700 w-full text-center"
                   >
                     Products
-                  </a>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {showProductMenu && (
+                      <motion.ul
+                        key="product-submenu"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="overflow-hidden flex flex-col gap-4 !mt-2 text-sm text text-[#84aa2c]"
+                      >
+                        <li>
+                          <Link
+                            to="/products?item=indian-rice"
+                            onClick={() => setIsOpen(false)}
+                            className={`text-lg !px-4 py-2 rounded ${
+                              path === "/products?item=indian-rice"
+                                ? "text-green-700 font-bold underline"
+                                : "text-black"
+                            }`}
+                          >
+                            Indian Rice
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products?item=jasmine-rice"
+                            onClick={() => setIsOpen(false)}
+                            className={`text-lg !px-4 py-2 rounded ${
+                              path === "/products?item=jasmine-rice"
+                                ? "text-green-700 font-bold underline"
+                                : "text-black"
+                            }`}
+                          >
+                            Jasmine Rice
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products?item=engine-lubricants"
+                            onClick={() => setIsOpen(false)}
+                            className={`text-lg !px-4 py-2 rounded ${
+                              path === "/products?item=engine-lubricants"
+                                ? "text-green-700 font-bold underline"
+                                : "text-black"
+                            }`}
+                          >
+                            Engine Lubricants
+                          </Link>
+                        </li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
                 </li>
+
                 <li>
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     onClick={() => setIsOpen(false)}
-                    className="hover:underline"
+                    className={`text-lg !px-4 py-2 rounded ${
+                      location.pathname === "/contact"
+                        ? "text-green-700 font-bold underline"
+                        : "text-black"
+                    }`}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.nav>
