@@ -23,10 +23,10 @@ const Footer = () => {
               <FaPhoneAlt /> +91 92163 99808
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> info@pinnacleexpo.com
+              <FaEnvelope /> pinnacle.chd@gmail.com
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> New Delhi, India
+              <FaMapMarkerAlt /> Phase 11, Mohali, India
             </li>
           </ul>
         </div>
