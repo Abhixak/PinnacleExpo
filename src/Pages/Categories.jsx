@@ -24,8 +24,8 @@ const Categories = () => {
   return (
     <>
       <div className="bg-[#fff5ff] text-slate-800 !px-4 !py-2">
-        <h2 className="text-2xl sm:text-3xl font-bold !mt-4 !mb-1 text-[#005a34] text-center">
-          Categories
+        <h2 className="text-2xl w-full sm:text-3xl font-semibold tracking-tight text-center text-[#005a34] !mt-4 !mb-1 relative inline-block !px-6 !py-2 bg-gradient-to-r from-[#e3ffe9] via-[#faf8ff] to-[#e3ffe9] border border-[#b2dfdb] rounded-full shadow-md">
+          🌟 Explore Our Categories 🌿
         </h2>
 
         <CategoryGrid
@@ -34,9 +34,10 @@ const Categories = () => {
           onSelect={handleCategoryClick}
         />
 
-        <h3 className="text-2xl !my-4 text-center text-[#005a34] font-bold">
-          Featured Products
-        </h3>
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-wide text-center text-[#4a006e] bg-gradient-to-r from-[#fdf4ff] via-[#faf8ff] to-[#fdf4ff] border border-[#e0baff] rounded-full !px-6 !py-2 shadow-sm !mt-6 !mb-2">
+          ✨ Featured Products ✨
+        </h2>
+
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6 !mb-8 !py-4">
           <AnimatePresence>
