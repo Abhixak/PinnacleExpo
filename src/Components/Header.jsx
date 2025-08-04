@@ -263,7 +263,7 @@ const Header = () => {
                 <li>
                   <button
                     onClick={() => setShowProductMenu(!showProductMenu)}
-                    className="hover:underline text-green-700 w-full text-center"
+                    className="hover:underline text-black w-full text-center"
                   >
                     Products
                   </button>
@@ -285,7 +285,7 @@ const Header = () => {
                             className={`text-lg !px-4 py-2 rounded ${
                               path === "/products?item=indian-rice"
                                 ? "text-green-700 font-bold underline"
-                                : "text-black"
+                                : "text-gray-400 text-sm"
                             }`}
                           >
                             Indian Rice
@@ -298,7 +298,7 @@ const Header = () => {
                             className={`text-lg !px-4 py-2 rounded ${
                               path === "/products?item=jasmine-rice"
                                 ? "text-green-700 font-bold underline"
-                                : "text-black"
+                                : "text-gray-400 text-sm"
                             }`}
                           >
                             Jasmine Rice
@@ -311,7 +311,7 @@ const Header = () => {
                             className={`text-lg !px-4 py-2 rounded ${
                               path === "/products?item=engine-lubricants"
                                 ? "text-green-700 font-bold underline"
-                                : "text-black"
+                                : "text-gray-400 text-sm"
                             }`}
                           >
                             Engine Lubricants
