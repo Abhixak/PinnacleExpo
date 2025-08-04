@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaInstagram,
 } from "react-icons/fa";
+import contactImg from "../assets/contact.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,8 @@ const Header = () => {
             className="text-blue-500 flex items-center gap-1"
             title="Call"
           >
-            <FaPhoneAlt /> <span className="hidden sm:block">+919216399808</span>
+            <FaPhoneAlt />{" "}
+            <span className="hidden sm:block">+919216399808</span>
           </a>
 
           <a
@@ -47,7 +49,8 @@ const Header = () => {
             className="text-green-400 flex items-center gap-1"
             title="WhatsApp"
           >
-            <FaWhatsapp /> <span className="hidden sm:block">+919216399808</span>
+            <FaWhatsapp />{" "}
+            <span className="hidden sm:block">+919216399808</span>
           </a>
         </div>
       </section>
@@ -132,6 +135,7 @@ const Header = () => {
         )}
 
         {/* Desktop Nav */}
+
         <nav className="hidden md:flex gap-6 text-lg text-gray-800 font-medium">
           <a href="#home" className="hover:text-green-700">
             Home

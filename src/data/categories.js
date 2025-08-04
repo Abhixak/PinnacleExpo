@@ -5,12 +5,12 @@ import oilImg from "../assets/Categories/EOil.jpeg";
 
 export default [
   {
-    name: "Non Basmati Rice",
+    name: "Indian Rice",
     image: riceImg,
     description: "High-quality non-basmati rice suitable for everyday meals and bulk exports.",
   },
   {
-    name: "Basmati Rice",
+    name: "Jasmine Rice",
     image: basmatiImg,
     description: "Premium aromatic basmati rice ideal for gourmet cooking and international trade.",
   },

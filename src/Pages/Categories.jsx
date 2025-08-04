@@ -38,7 +38,10 @@ const Categories = () => {
           ✨ Featured Products ✨
         </h2>
 
-
+        <p className="text-sm text-gray-500 !mb-2">
+          Showing {filteredProducts.length} Product
+          {filteredProducts.length !== 1 ? "s" : ""}
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6 !mb-8 !py-4">
           <AnimatePresence>
             {visibleProducts.map((prod) => (
@@ -67,10 +70,10 @@ const Categories = () => {
         </div>
 
         {visibleCount < filteredProducts.length && (
-          <div className="flex justify-center !mt-8">
+          <div className="flex justify-center">
             <button
               onClick={() => setVisibleCount(visibleCount + 5)}
-              className="bg-green-600 hover:bg-green-700 text-white !px-8 !py-3 !mb-10 rounded-md transition"
+              className="bg-green-600 hover:bg-green-700 text-white !mb-6 !px-8 !py-3 rounded-md transition"
             >
               View More
             </button>
