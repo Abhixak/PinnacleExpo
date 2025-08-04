@@ -63,6 +63,10 @@ const Header = () => {
             className="h-22 md:h-24 xl:h-26 w-auto"
           />
         </div>
+        <p className="text-center text-sm sm:text-base text-green-600 drop-shadow-md max-w-xs mx-auto">
+  Reach out for Global Export Opportunities & Authorized Distributorships
+</p>
+
 
         {/* Menu Button Section */}
         {!isOpen ? (
@@ -135,7 +139,9 @@ const Header = () => {
         )}
 
         {/* Desktop Nav */}
-
+        {/* <a href="#">
+          <img src={contactImg} className="h-20 absolute top-8 right-100" alt="contact Image" />
+        </a> */}
         <nav className="hidden md:flex gap-6 text-lg text-gray-800 font-medium">
           <a href="#home" className="hover:text-green-700">
             Home
