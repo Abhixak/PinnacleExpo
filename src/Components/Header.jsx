@@ -114,7 +114,7 @@ const Header = () => {
             </button>
           </div>
         ) : (
-          // Left Arrow Button (when menu is open)
+          // Arrow Button (when menu is open)
           <motion.div
             initial={{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -124,7 +124,7 @@ const Header = () => {
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="text-green-900 focus:outline-none bg-white !p-2 rounded-full shadow"
+              className="text-green-900 focus:outline-none !p-2 rounded-full shadow-lg"
             >
               <FaArrowRight className="w-6 h-6" />
             </button>

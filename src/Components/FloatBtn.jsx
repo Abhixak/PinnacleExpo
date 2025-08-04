@@ -55,7 +55,7 @@ const FloatBtn = () => {
                 exit="exit"
                 href="https://wa.me/+919216399808"
                 target="_blank"
-                className="absolute bg-green-500 text-white !p-3 rounded-full shadow"
+                className="absolute !mb-4 bg-green-500 text-white !p-3 text-lg rounded-full shadow"
               >
                 <FaWhatsapp />
               </motion.a>
@@ -69,7 +69,7 @@ const FloatBtn = () => {
                 animate="visible"
                 exit="exit"
                 href="tel:+919216399808"
-                className="absolute bg-blue-600 text-white !p-3 rounded-full shadow"
+                className="absolute !mb-4 bg-blue-600 text-white !p-3 rounded-full shadow"
               >
                 <FaPhoneAlt />
               </motion.a>
@@ -83,7 +83,7 @@ const FloatBtn = () => {
                 animate="visible"
                 exit="exit"
                 href="mailto:pinnacle.chd@gmail.com"
-                className="absolute bg-red-500 text-white !p-3 rounded-full shadow"
+                className="absolute !mb-4 bg-red-500 text-white !p-3 rounded-full shadow"
               >
                 <FaEnvelope />
               </motion.a>

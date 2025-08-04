@@ -28,21 +28,21 @@ export default [
   {
     id: 2,
     name: "Sona Masoori Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: sona,
     description: "Soft, lightweight, and aromatic rice ideal for everyday meals like pulao and pongal."
   },
   {
     id: 3,
     name: "Thai Jasmine Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: jasmine,
     description: "Long-grain, fragrant Thai rice known for its subtly sweet flavor and fluffy texture."
   },
   {
     id: 4,
     name: "Sharbati Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: sharbati,
     description: "Aromatic and flavorful long-grain rice perfect for biryani, khichdi, and other Indian dishes."
   },
@@ -70,70 +70,70 @@ export default [
   {
     id: 8,
     name: "Sugandha Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: Sugandha,
     description: "Mildly aromatic long-grain rice, an affordable alternative to basmati, great for everyday use."
   },
   {
     id: 9,
     name: "Parmal Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: Parmal,
     description: "Economical rice variety with slender grains, commonly used in large-scale cooking and catering."
   },
   {
     id: 10,
     name: "PR11 Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: PR11,
     description: "Long grain rice with good cooking quality and fluffiness, used widely in South Asian kitchens."
   },
   {
     id: 11,
     name: "PR14 Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: PR14,
     description: "High-yield rice variety with excellent texture, used in various traditional and modern recipes."
   },
   {
     id: 12,
     name: "Ponni Rice",
-    category: "Non Basmmati Rice",
+    category: "Non Basmati Rice",
     image: Ponni,
     description: "Popular South Indian rice known for its softness and nutritional value, perfect for steamed dishes."
   },
   {
     id: 13,
     name: "1121 Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: R1121,
     description: "Extra-long grain basmati rice with excellent elongation, widely used in royal biryanis and pulao."
   },
   {
     id: 14,
     name: "1718 Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: R1718,
     description: "Highly aromatic hybrid basmati with long grains and great cooking quality, ideal for exports."
   },
   {
     id: 15,
     name: "1509 Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: R1509,
     description: "Early-maturing basmati variety with long grains, subtle aroma, and high yield."
   },
   {
     id: 16,
     name: "1401 Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: R1401,
     description: "Popular long-grain basmati with soft texture and rich aroma, suited for daily and festive meals."
   },
   {
     id: 17,
     name: "Pusa Rice",
-    category: "Basmmati Rice",
+    category: "Basmati Rice",
     image: Pusa,
     description: "Hybrid basmati rice variety with a strong aroma and superior grain length, ideal for special cuisines."
   }

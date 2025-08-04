@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Categories = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("Non Basmati Rice");
   const [visibleCount, setVisibleCount] = useState(5);
   const [selectedProduct, setSelectedProduct] = useState(null); // 🆕 Modal state
 
@@ -24,7 +24,7 @@ const Categories = () => {
   return (
     <>
       <div className="bg-[#fff5ff] text-slate-800 !px-4 !py-2">
-        <h2 className="text-2xl sm:text-3xl font-bold !mt-10 !mb-4 text-[#005a34] text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold !my-4 text-[#005a34] text-center">
           Categories
         </h2>
 
@@ -34,7 +34,7 @@ const Categories = () => {
           onSelect={handleCategoryClick}
         />
 
-        <h3 className="text-2xl !m-8 text-center text-[#005a34] font-semibold">
+        <h3 className="text-2xl !my-4 text-center text-[#005a34] font-bold">
           Featured Products
         </h3>
 
