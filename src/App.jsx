@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FloatBtn from "./Components/FloatBtn";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import Seo from "./Components/Seo";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -13,6 +14,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   return (
     <Router>
+      <Seo />
       <FloatBtn />
       <Header />
       <ScrollToTop />

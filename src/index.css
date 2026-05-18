@@ -1,7 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap");
 @import "tailwindcss";
 
-*{
+:root {
+  --ink: #10233b;
+  --navy: #16365f;
+  --blue: #1f5d8b;
+  --gold: #c79a4b;
+  --sand: #f5efe4;
+  --paper: #fbfaf8;
+  --line: rgba(16, 35, 59, 0.1);
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(31, 93, 139, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(199, 154, 75, 0.12), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 48%, #f5f7fb 100%);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+.display-font {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.01em;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(199, 154, 75, 0.25);
 }

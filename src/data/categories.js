@@ -1,22 +1,19 @@
-// data/categories.js
-import riceImg from "../assets/Categories/Rice.jpeg";
-import basmatiImg from "../assets/Categories/Basmmati.jpeg";
-import oilImg from "../assets/Categories/EOil.jpeg";
+import { cloudinaryAssets } from "./cloudinaryAssets";
 
 export default [
   {
     name: "Indian Rice",
-    image: riceImg,
+    image: cloudinaryAssets["categories.rice"],
     description: "High-quality non-basmati rice suitable for everyday meals and bulk exports.",
   },
   {
     name: "Jasmine Rice",
-    image: basmatiImg,
+    image: cloudinaryAssets["categories.basmati"],
     description: "Premium aromatic basmati rice ideal for gourmet cooking and international trade.",
   },
   {
     name: "Engine Lubricants",
-    image: oilImg,
+    image: cloudinaryAssets["categories.engine_lubricants"],
     description: "Top-grade lubricants engineered for long-lasting engine performance and protection.",
   },
 ];

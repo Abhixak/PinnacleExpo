@@ -1,119 +1,131 @@
-import Logo from "/logo.png";
+import { cloudinaryAssets } from "../data/cloudinaryAssets";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-[#F9FAFB] to-[#F3F4F6] text-[#111827] !p-6 sm:!p-10 md:!p-16 lg:!p-24">
-      {/* Hero Section */}
-      <section className="max-w-6xl !mx-auto flex flex-col items-center text-center">
-        <img src={Logo} alt="Logo" className="h-50 w-60 mb-6" />
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#1E3A8A] !mb-4 tracking-wide">
+    <div className="bg-gradient-to-b from-[#F9FAFB] to-[#F3F4F6] text-[#111827] !px-4 !py-6 sm:!px-6 sm:!py-10 md:!px-10 md:!py-14 lg:!px-16 lg:!py-20">
+      <section className="!mx-auto flex max-w-7xl flex-col items-center text-center">
+        <img
+          src={cloudinaryAssets.logo}
+          alt="Logo"
+          className="!mb-5 w-28 sm:w-40 md:w-48"
+        />
+        <h1 className="!mb-3 text-2xl font-extrabold tracking-wide text-[#1E3A8A] sm:text-4xl lg:text-5xl">
           Welcome to Pinnacle Expo
         </h1>
-        <p className="text-base sm:text-lg text-gray-600 max-w-3xl !mx-auto">
-          Your trusted partner for global export and authorized distributorship of high-quality Indian & Thai rice and premium engine lubricants. Connecting tradition with innovation, we deliver excellence across borders.
+        <p className="!mx-auto max-w-3xl text-sm leading-6 text-gray-600 sm:leading-7 sm:text-base lg:text-lg">
+          Your trusted partner for global export and authorized distributorship
+          of high-quality Indian & Thai rice and premium engine lubricants.
+          Connecting tradition with innovation, we deliver excellence across
+          borders.
         </p>
       </section>
 
-      {/* Vision / Mission / Values */}
-      <section className="!mt-16 grid lg:grid-cols-3 gap-8">
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition !p-6 text-center border border-violet-100">
-          <h2 className="text-2xl font-bold text-[#059669] !mb-2">Our Vision</h2>
-          <p className="text-gray-600">
-            To be a globally admired export brand known for our uncompromising quality, customer-first approach, and sustainable partnerships.
+      <section className="!mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 sm:!mt-14 sm:gap-6">
+        <div className="rounded-2xl border border-violet-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Vision</h2>
+          <p className="text-sm leading-6 text-gray-600 sm:text-base">
+            To be a globally admired export brand known for our uncompromising
+            quality, customer-first approach, and sustainable partnerships.
           </p>
         </div>
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition !p-6 text-center border border-blue-100">
-          <h2 className="text-2xl font-bold text-[#059669] !mb-2">Our Mission</h2>
-          <p className="text-gray-600">
-            We aim to deliver world-class products and services that enhance lives and businesses across continents.
+        <div className="rounded-2xl border border-blue-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Mission</h2>
+          <p className="text-sm leading-6 text-gray-600 sm:text-base">
+            We aim to deliver world-class products and services that enhance
+            lives and businesses across continents.
           </p>
         </div>
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition !p-6 text-center border border-emerald-100">
-          <h2 className="text-2xl font-bold text-[#059669] !mb-2">Our Values</h2>
-          <p className="text-gray-600">
-            Integrity, transparency, sustainability, and relentless pursuit of excellence are at the heart of everything we do.
+        <div className="rounded-2xl border border-emerald-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Values</h2>
+          <p className="text-sm leading-6 text-gray-600 sm:text-base">
+            Integrity, transparency, sustainability, and relentless pursuit of
+            excellence are at the heart of everything we do.
           </p>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="!mt-20">
-        <h2 className="text-3xl font-bold text-center text-[#1E3A8A] !mb-8">
+      <section className="!mt-14">
+        <h2 className="!mb-6 text-center text-2xl font-bold text-[#1E3A8A] sm:!mb-8 sm:text-3xl">
           Why Choose Pinnacle Expo?
         </h2>
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl !mx-auto">
-          <ul className="space-y-4 text-gray-700">
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Direct sourcing from certified farms and manufacturers
+        <div className="!mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:gap-10">
+          <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+             - Direct sourcing from certified farms and manufacturers</span>
             </li>
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Export-grade packaging and international certifications
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+              - Export-grade packaging and international certifications</span>
             </li>
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Timely global deliveries with top logistics support
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+              - Timely global deliveries with top logistics support</span>
             </li>
           </ul>
-          <ul className="space-y-4 text-gray-700">
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice
+          <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+              - Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice</span>
             </li>
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Premium engine lubricants suitable for global markets
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+              - Premium engine lubricants suitable for global markets</span>
             </li>
-            <li className="flex gap-3 items-start">
-              <span className="text-[#059669] text-lg font-bold">✓</span>
-              Dedicated support team available 24x7
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">
+              - Dedicated support team available 24x7</span>
             </li>
           </ul>
         </div>
       </section>
 
-      {/* Product Range */}
-      <section className="!mt-20">
-        <h2 className="text-3xl font-bold text-center text-[#6D28D9] !mb-8">
+      <section className="!mt-14">
+        <h2 className="!mb-6 text-center text-2xl font-bold text-[#6D28D9] sm:!mb-8 sm:text-3xl">
           Our Product Range
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow hover:shadow-lg !p-6 border border-indigo-100">
-            <h3 className="text-xl font-semibold text-[#1E3A8A] !mb-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+          <div className="rounded-xl border border-indigo-100 bg-white !p-4 shadow hover:shadow-lg sm:!p-6">
+            <h3 className="!mb-2 text-lg font-semibold text-[#1E3A8A] sm:text-xl">
               Indian Basmati Rice
             </h3>
-            <p className="text-gray-600">
-              Aromatic, long-grain rice sourced from the fertile plains of Punjab and Haryana, known globally for its quality.
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
+              Aromatic, long-grain rice sourced from the fertile plains of
+              Punjab and Haryana, known globally for its quality.
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow hover:shadow-lg !p-6 border border-violet-100">
-            <h3 className="text-xl font-semibold text-[#1E3A8A] !mb-2">
+          <div className="rounded-xl border border-violet-100 bg-white !p-4 shadow hover:shadow-lg sm:!p-6">
+            <h3 className="!mb-2 text-lg font-semibold text-[#1E3A8A] sm:text-xl">
               Thai Jasmine Rice
             </h3>
-            <p className="text-gray-600">
-              Authentic jasmine rice cultivated in Thailand, known for its fragrance, softness, and fluffy texture.
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
+              Authentic jasmine rice cultivated in Thailand, known for its
+              fragrance, softness, and fluffy texture.
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow hover:shadow-lg !p-6 border border-emerald-100">
-            <h3 className="text-xl font-semibold text-[#1E3A8A] !mb-2">
+          <div className="rounded-xl border border-emerald-100 bg-white !p-4 shadow hover:shadow-lg sm:!p-6">
+            <h3 className="!mb-2 text-lg font-semibold text-[#1E3A8A] sm:text-xl">
               Engine Lubricants
             </h3>
-            <p className="text-gray-600">
-              High-performance lubricants designed for industrial and automotive applications across global markets.
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
+              High-performance lubricants designed for industrial and automotive
+              applications across global markets.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="!mb-6 !mt-10 text-center max-w-3xl !mx-auto">
-        <h2 className="text-3xl font-bold text-[#1E3A8A] !mb-4">
+      <section className="!mx-auto !mb-6 !mt-8 max-w-3xl text-center">
+        <h2 className="!mb-3 text-2xl font-bold text-[#1E3A8A] sm:!mb-4 sm:text-3xl">
           Connect With Us
         </h2>
-        <p className="text-gray-600">
-          Ready to build a lasting export partnership or want to become an authorized distributor? <br />
-          Reach out to <span className="text-[#6D28D9] font-semibold">Pinnacle Expo</span> and let us help you grow globally.
+        <p className="text-sm leading-7 text-gray-600 sm:text-base">
+          Ready to build a lasting export partnership or want to become an
+          authorized distributor?
+          <br />
+          Reach out to{" "}
+          <span className="font-semibold text-[#6D28D9]">Pinnacle Expo</span>{" "}
+          and let us help you grow globally.
         </p>
       </section>
     </div>

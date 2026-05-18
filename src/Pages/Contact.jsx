@@ -10,10 +10,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_4fg130m", // replace this
-        "template_5ddvi2h", // replace this
+        "service_4fg130m",
+        "template_5ddvi2h",
         form.current,
-        "mOgr9p-U079ff5LAe" // replace this
+        "mOgr9p-U079ff5LAe"
       )
       .then(
         () => {
@@ -27,50 +27,49 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-white text-slate-800 min-h-screen !px-4 !py-8 sm:!px-8 md:!px-16 lg:!px-20">
-      <div className="max-w-5xl !mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#005a34] !mb-2">
+    <section className="min-h-screen bg-white text-slate-800 !px-4 !py-6 sm:!px-6 sm:!py-10 lg:!px-8 lg:!py-12">
+      <div className="!mx-auto max-w-6xl">
+        <h1 className="!mt-3 text-center text-2xl font-bold text-[#005a34] sm:text-4xl">
           Get in Touch With Us
         </h1>
-        <p className="text-center text-gray-500 text-sm sm:text-base max-w-xl !mx-auto !mb-8">
+        <p className="!mx-auto !mb-6 max-w-2xl text-center text-sm text-gray-500 sm:!mb-8 sm:text-base">
           We're here to assist you with your export and distributorship needs.
           Reach out today!
         </p>
 
-        {/* Company Info Section */}
-        <div className="!mt-12 !mb-6 grid grid-cols-1 sm:grid-cols-2 gap-8 bg-[#f9f9ff] rounded-2xl shadow-md !p-6 md:!p-8">
-          <div>
-            <h2 className="text-xl font-semibold text-[#005a34] !mb-2">
+        <div className="!mt-10 !mb-6 grid grid-cols-1 gap-5 rounded-3xl bg-[#f9f9ff] shadow-md md:grid-cols-2 !p-4 sm:!p-6 lg:!p-8">
+          <div className="space-y-2">
+            <h2 className="text-lg font-semibold text-[#005a34] sm:text-xl">
               Company Details
             </h2>
-            <p className="text-gray-600">
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
               <strong>Name:</strong> Pinnacle Group
             </p>
-            <p className="text-gray-600">
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
               <strong>Address:</strong> SCF 124, First Floor, Phase 11 Mohali,
               Punjab, India, 160062
             </p>
-            <p className="text-gray-600">
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
               <strong>Email:</strong> pinnacle.chd@gmail.com
             </p>
-            <p className="text-gray-600">
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
               <strong>Phone:</strong> +91 9216399808
             </p>
           </div>
-          <div>
-            <h2 className="text-xl font-semibold text-[#005a34] !mb-2">
+          <div className="space-y-2">
+            <h2 className="text-lg font-semibold text-[#005a34] sm:text-xl">
               Opening Hours
             </h2>
-            <ul className="text-gray-600">
+            <ul className="text-sm leading-6 text-gray-600 sm:text-base">
               <li>
-                <strong>Monday - Sunday:</strong> 10:00 AM – 7:00 PM
+                <strong>Monday - Sunday:</strong> 10:00 AM â€“ 7:00 PM
               </li>
             </ul>
-            <div className="mt-2">
+            <div className="!mt-2">
               <h3 className="font-semibold text-gray-700">
                 Distributorship Queries:
               </h3>
-              <p>
+              <p className="text-sm leading-6 text-gray-600 sm:text-base">
                 Reach out to us via phone or email for details about global
                 distributorship and export partnerships.
               </p>
@@ -78,10 +77,9 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
-          <div className="bg-[#f9f9ff] rounded-2xl shadow-md !p-6 md:!p-8">
-            <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="rounded-3xl bg-[#f9f9ff] shadow-md !p-4 sm:!p-6 lg:!p-8">
+            <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3 sm:gap-5">
               <div>
                 <label className="block text-sm font-medium text-gray-600">
                   Full Name
@@ -90,7 +88,7 @@ const Contact = () => {
                   type="text"
                   name="from_name"
                   required
-                  className="w-full border border-gray-300 rounded-xl !px-4 !py-2 focus:outline-none focus:border-[#005a34]"
+                  className="w-full rounded-xl border border-gray-300 !px-3 !py-3 text-sm focus:border-[#005a34] focus:outline-none sm:!px-4 sm:text-base"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -102,7 +100,7 @@ const Contact = () => {
                   type="email"
                   name="from_email"
                   required
-                  className="w-full border border-gray-300 rounded-xl !px-4 !py-2 focus:outline-none focus:border-[#005a34]"
+                  className="w-full rounded-xl border border-gray-300 !px-3 !py-3 text-sm focus:border-[#005a34] focus:outline-none sm:!px-4 sm:text-base"
                   placeholder="Enter your email"
                 />
               </div>
@@ -113,7 +111,7 @@ const Contact = () => {
                 <input
                   type="tel"
                   name="phone"
-                  className="w-full border border-gray-300 rounded-xl !px-4 !py-2 focus:outline-none focus:border-[#005a34]"
+                  className="w-full rounded-xl border border-gray-300 !px-3 !py-3 text-sm focus:border-[#005a34] focus:outline-none sm:!px-4 sm:text-base"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -125,24 +123,25 @@ const Contact = () => {
                   name="message"
                   rows="4"
                   required
-                  className="w-full border border-gray-300 rounded-xl !px-4 !py-2 focus:outline-none focus:border-[#005a34]"
+                  className="w-full rounded-xl border border-gray-300 !px-3 !py-3 text-sm focus:border-[#005a34] focus:outline-none sm:!px-4 sm:text-base"
                   placeholder="Type your message here..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#005a34] hover:bg-[#00794e] text-white font-semibold !py-2 !px-4 rounded-xl transition duration-300"
+                className="w-full rounded-xl bg-[#005a34] !px-4 !py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#00794e] sm:text-base"
               >
                 Send Message
               </button>
               {status && (
-                <p className="text-sm text-center mt-2 text-green-600">{status}</p>
+                <p className="!mt-2 text-center text-sm text-green-600">
+                  {status}
+                </p>
               )}
             </form>
           </div>
 
-          {/* Google Map */}
-          <div className="rounded-2xl overflow-hidden shadow-md h-[450px]">
+          <div className="min-h-[260px] overflow-hidden rounded-3xl shadow-md sm:min-h-[420px] lg:min-h-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.4385414839744!2d76.74534417537078!3d30.67793507461078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0f88a2d025%3A0x7888af2f001aa06!2sPinnacle%20Group!5e0!3m2!1sen!2sin!4v1754308058516!5m2!1sen!2sin"
               width="100%"
@@ -151,6 +150,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="h-full w-full"
             ></iframe>
           </div>
         </div>

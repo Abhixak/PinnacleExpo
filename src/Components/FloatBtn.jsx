@@ -5,7 +5,6 @@ import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaHeadset } from "react-icons/fa";
 const FloatBtn = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Heartbeat animation variant
   const heartbeat = {
     animate: {
       scale: [1, 1.1, 1],
@@ -17,12 +16,11 @@ const FloatBtn = () => {
     },
   };
 
-  // Icon animation variants
   const iconVariants = {
     hidden: { opacity: 0, y: 0, scale: 0.5 },
     visible: (i) => ({
       opacity: 1,
-      y: -i * 60, // Distance between each icon
+      y: -i * 60,
       scale: 1,
       transition: {
         delay: i * 0.05,
@@ -40,12 +38,11 @@ const FloatBtn = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-3 right-3 z-50 sm:bottom-6 sm:right-6">
       <div className="relative flex flex-col items-center justify-end">
         <AnimatePresence>
           {isOpen && (
             <>
-              {/* WhatsApp */}
               <motion.a
                 key="whatsapp"
                 custom={1}
@@ -55,12 +52,11 @@ const FloatBtn = () => {
                 exit="exit"
                 href="https://wa.me/+919216399808"
                 target="_blank"
-                className="absolute !mb-4 bg-green-500 text-white !p-3 text-lg rounded-full shadow"
+                className="absolute !mb-4 rounded-full bg-green-500 !p-2.5 text-sm text-white shadow sm:!p-3 sm:text-lg"
               >
                 <FaWhatsapp />
               </motion.a>
 
-              {/* Call */}
               <motion.a
                 key="call"
                 custom={2}
@@ -69,12 +65,11 @@ const FloatBtn = () => {
                 animate="visible"
                 exit="exit"
                 href="tel:+919216399808"
-                className="absolute !mb-4 bg-blue-600 text-white !p-3 rounded-full shadow"
+                className="absolute !mb-4 rounded-full bg-blue-600 !p-2.5 text-white shadow sm:!p-3"
               >
                 <FaPhoneAlt />
               </motion.a>
 
-              {/* Email */}
               <motion.a
                 key="email"
                 custom={3}
@@ -83,7 +78,7 @@ const FloatBtn = () => {
                 animate="visible"
                 exit="exit"
                 href="mailto:pinnacle.chd@gmail.com"
-                className="absolute !mb-4 bg-red-500 text-white !p-3 rounded-full shadow"
+                className="absolute !mb-4 rounded-full bg-red-500 !p-2.5 text-white shadow sm:!p-3"
               >
                 <FaEnvelope />
               </motion.a>
@@ -91,14 +86,13 @@ const FloatBtn = () => {
           )}
         </AnimatePresence>
 
-        {/* Main Floating Button */}
         <motion.button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="bg-[#005a34] text-white !p-4 rounded-full shadow-lg focus:outline-none z-10"
+          className="z-10 cursor-pointer rounded-full bg-[#a5353a] !p-2.5 text-white shadow-lg focus:outline-none sm:!p-4"
           animate={!isOpen ? "animate" : ""}
           variants={!isOpen ? heartbeat : {}}
         >
-          <FaHeadset className="w-5 h-5" />
+          <FaHeadset className="h-5 w-5" />
         </motion.button>
       </div>
     </div>
