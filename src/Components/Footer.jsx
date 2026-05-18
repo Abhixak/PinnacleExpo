@@ -5,7 +5,7 @@ import { cloudinaryAssets } from "../data/cloudinaryAssets";
 const Footer = () => {
   return (
     <footer className="bg-[#313268] text-white !px-5 !py-8 text-center sm:!px-10 sm:!py-12">
-      <div className="!mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-8 lg:gap-12 sm:place-items-center">
+      <div className="!mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 lg:gap-12 sm:place-items-center">
         <div className="flex flex-col items-center">
           <img
             src={cloudinaryAssets.logo}
@@ -17,9 +17,25 @@ const Footer = () => {
             rice and engine lubricants.
           </p>
         </div>
-
         <div className="flex flex-col items-center">
-          <h4 className="!mb-3 text-base font-semibold sm:text-lg">Contact Us</h4>
+          <div className="flex flex-col items-center !p-4">
+            <img
+              src="/BRICS.jpg"
+              alt="Verified BRICS Member"
+              className="w-22 rounded-xl object-contain shadow-sm sm:w-36"
+            />
+            <p className="!mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-gray-200">
+              Verified BRICS Member
+            </p>
+            <p className="!mt-1 max-w-[12rem] text-[11px] leading-5 text-gray-300">
+              Positioned for trusted trade relationships across global markets.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <h4 className="!mb-3 text-base font-semibold sm:text-lg">
+            Contact Us
+          </h4>
           <ul className="space-y-2 text-xs text-gray-300 sm:text-sm">
             <li className="flex items-center justify-center gap-2 sm:justify-start">
               <FaPhoneAlt /> +91 92163 99808
@@ -34,7 +50,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <h4 className="!mb-3 text-base font-semibold sm:text-lg">Quick Links</h4>
+          <h4 className="!mb-3 text-base font-semibold sm:text-lg">
+            Quick Links
+          </h4>
           <ul className="space-y-2 text-xs text-gray-300 sm:text-sm">
             <li>
               <a href="/" className="hover:text-white">
@@ -58,6 +76,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
+        
       </div>
     </footer>
   );

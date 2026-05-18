@@ -62,7 +62,7 @@ const Contact = () => {
             </h2>
             <ul className="text-sm leading-6 text-gray-600 sm:text-base">
               <li>
-                <strong>Monday - Sunday:</strong> 10:00 AM â€“ 7:00 PM
+                <strong>Monday - Sunday:</strong> 10:00 AM - 7:00 PM
               </li>
             </ul>
             <div className="!mt-2">

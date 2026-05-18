@@ -18,6 +18,23 @@ const About = () => {
           Connecting tradition with innovation, we deliver excellence across
           borders.
         </p>
+
+        <div className="!mt-6 flex flex-col items-center rounded-2xl border border-[var(--line)] bg-white/80 !px-4 !py-4 shadow-sm sm:flex-row sm:gap-4">
+          <img
+            src="/BRICS.jpg"
+            alt="Verified BRICS Member"
+            className=" w-26 rounded-xl object-contain shadow-sm sm:w-32 lg:w-40"
+          />
+          <div className="!mt-3 text-center sm:!mt-0 sm:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--blue)]">
+              Verified BRICS Member
+            </p>
+            <p className="!mt-1 max-w-xl text-xs leading-5 text-gray-600 sm:text-sm sm:leading-6">
+              Building trusted export relationships with buyers and distributors
+              across international markets.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="!mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 sm:!mt-14 sm:gap-6">
@@ -51,30 +68,30 @@ const About = () => {
         <div className="!mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:gap-10">
           <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-             - Direct sourcing from certified farms and manufacturers</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Direct sourcing from certified farms and manufacturers</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-              - Export-grade packaging and international certifications</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Export-grade packaging and international certifications</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-              - Timely global deliveries with top logistics support</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Timely global deliveries with top logistics support</span>
             </li>
           </ul>
           <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-              - Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-              - Premium engine lubricants suitable for global markets</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Premium engine lubricants suitable for global markets</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-lg font-bold text-[#059669]">
-              - Dedicated support team available 24x7</span>
+              <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Dedicated support team available 24x7</span>
             </li>
           </ul>
         </div>
