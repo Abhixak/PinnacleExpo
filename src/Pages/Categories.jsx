@@ -44,7 +44,7 @@ const Categories = () => {
             {categorySections.map((category) => (
               <div key={category.name} className="space-y-4">
                 <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
-                  <div className="!my-4">
+                  <div className="!my-2">
                     <h3 className="text-xl font-bold text-[#313268] sm:text-2xl">
                       {category.name}
                     </h3>
@@ -52,7 +52,7 @@ const Categories = () => {
                       {category.description}
                     </p>
                   </div>
-                  <span className="inline-flex rounded-full border border-[#313268]/15 bg-white !px-3 !py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#313268]">
+                  <span className="inline-flex !my-1 rounded-full border border-[#313268]/15 bg-white !px-3 !py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#313268]">
                     {category.products.length} products
                   </span>
                 </div>

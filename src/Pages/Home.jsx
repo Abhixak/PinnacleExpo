@@ -12,7 +12,7 @@ const Home = () => {
       <section className="!px-4 !pt-4 !pb-6 sm:!px-6 sm:!pt-8 sm:!pb-10 lg:!px-8">
         <div className="!mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-5 sm:space-y-6">
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-[var(--line)] bg-white/80 !px-3 !py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--blue)] shadow-sm sm:!px-4 sm:text-xs sm:tracking-[0.22em]">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-[var(--line)] bg-white/80 !px-3 !py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--blue)] shadow-sm sm:!px-4 !mb-2 sm:text-xs sm:tracking-[0.22em]">
               Premium export supply from trusted origins
             </div>
             <div className="space-y-3 sm:space-y-4">
