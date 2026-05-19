@@ -3,6 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import categories from "../data/categories.js";
 import products from "../data/products.js";
 import { cloudinaryAssets } from "../data/cloudinaryAssets";
+import { getCallLink, getWhatsAppLink } from "../utils/contactLinks";
 
 const slugToName = (slug) => slug.replace(/-/g, " ");
 
@@ -82,6 +83,22 @@ const Products = () => {
                 <p className="!mt-1 text-sm leading-5 text-gray-600 sm:leading-6">
                   {product.description || "No description available."}
                 </p>
+                <div className="!mt-4 flex flex-col gap-2 sm:flex-row">
+                  <a
+                    href={getWhatsAppLink(product.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#25D366] !px-4 !py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1fb85a]"
+                  >
+                    Enquire
+                  </a>
+                  <a
+                    href={getCallLink()}
+                    className="inline-flex flex-1 items-center justify-center rounded-xl border border-[#313268] bg-white !px-4 !py-2.5 text-sm font-semibold text-[#313268] shadow-sm transition hover:bg-slate-50"
+                  >
+                    Book on Call
+                  </a>
+                </div>
               </div>
             </div>
           ))}

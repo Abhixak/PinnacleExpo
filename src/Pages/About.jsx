@@ -23,11 +23,11 @@ const About = () => {
           <img
             src="/BRICS.jpg"
             alt="Verified BRICS Member"
-            className=" w-26 rounded-xl object-contain shadow-sm sm:w-32 lg:w-40"
+            className=" w-26 rounded-sm object-contain shadow-sm sm:w-36 lg:w-40"
           />
           <div className="!mt-3 text-center sm:!mt-0 sm:text-left">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--blue)]">
-              Verified BRICS Member
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--blue)]">
+              Member of BRICS CHAMBER OF COMMERCE
             </p>
             <p className="!mt-1 max-w-xl text-xs leading-5 text-gray-600 sm:text-sm sm:leading-6">
               Building trusted export relationships with buyers and distributors
@@ -39,21 +39,27 @@ const About = () => {
 
       <section className="!mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 sm:!mt-14 sm:gap-6">
         <div className="rounded-2xl border border-violet-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
-          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Vision</h2>
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">
+            Our Vision
+          </h2>
           <p className="text-sm leading-6 text-gray-600 sm:text-base">
             To be a globally admired export brand known for our uncompromising
             quality, customer-first approach, and sustainable partnerships.
           </p>
         </div>
         <div className="rounded-2xl border border-blue-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
-          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Mission</h2>
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">
+            Our Mission
+          </h2>
           <p className="text-sm leading-6 text-gray-600 sm:text-base">
             We aim to deliver world-class products and services that enhance
             lives and businesses across continents.
           </p>
         </div>
         <div className="rounded-2xl border border-emerald-100 bg-white !p-4 text-center shadow-md transition hover:shadow-xl sm:!p-6">
-          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">Our Values</h2>
+          <h2 className="!mb-2 text-xl font-bold text-[#059669] sm:text-2xl">
+            Our Values
+          </h2>
           <p className="text-sm leading-6 text-gray-600 sm:text-base">
             Integrity, transparency, sustainability, and relentless pursuit of
             excellence are at the heart of everything we do.
@@ -69,11 +75,15 @@ const About = () => {
           <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
-              <span>Direct sourcing from certified farms and manufacturers</span>
+              <span>
+                Direct sourcing from certified farms and manufacturers
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
-              <span>Export-grade packaging and international certifications</span>
+              <span>
+                Export-grade packaging and international certifications
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
@@ -83,7 +93,9 @@ const About = () => {
           <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
-              <span>Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice</span>
+              <span>
+                Wide range of Basmati, Thai Jasmine, and Non-Basmati Rice
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
@@ -141,7 +153,9 @@ const About = () => {
           authorized distributor?
           <br />
           Reach out to{" "}
-          <span className="font-semibold text-[#6D28D9]">Pinnacle Expo</span>{" "}
+          <span className="font-semibold text-[#6D28D9]">
+            Pinnacle Expo
+          </span>{" "}
           and let us help you grow globally.
         </p>
       </section>
