@@ -1,7 +1,7 @@
 export const cloudinaryAssets = {
   "logo": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085728/pinnacleexpo/logo.png",
   "brochure": "https://res.cloudinary.com/dljubulyn/raw/upload/v1779085828/pinnacleexpo/brochure",
-  "video": "https://res.cloudinary.com/dljubulyn/video/upload/v1779085833/pinnacleexpo/video.mp4",
+  "video": "https://res.cloudinary.com/dljubulyn/video/upload/v1784288586/pinnacleexpo/video.mp4",
   "categories.rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085889/pinnacleexpo/categories_rice.jpg",
   "categories.basmati": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_basmati.jpg",
   "categories.engine_lubricants": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_engine_lubricants.jpg",
@@ -21,5 +21,10 @@ export const cloudinaryAssets = {
   "products.rice_1718": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085901/pinnacleexpo/products_rice_1718.jpg",
   "products.rice_1509": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085902/pinnacleexpo/products_rice_1509.jpg",
   "products.rice_1401": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085903/pinnacleexpo/products_rice_1401.jpg",
-  "products.rice_1121": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085903/pinnacleexpo/products_rice_1121.jpg"
+  "products.rice_1121": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085903/pinnacleexpo/products_rice_1121.jpg",
+  "categories.london_colognes": "https://res.cloudinary.com/dljubulyn/image/upload/v1784286447/pinnacleexpo/categories_london_colognes.png",
+  "products.affection": "https://res.cloudinary.com/dljubulyn/image/upload/v1784286183/pinnacleexpo/products_affection.png",
+  "products.untamed": "https://res.cloudinary.com/dljubulyn/image/upload/v1784286184/pinnacleexpo/products_untamed.png",
+  "products.sensory": "https://res.cloudinary.com/dljubulyn/image/upload/v1784286185/pinnacleexpo/products_sensory.png",
+  "products.floral": "https://res.cloudinary.com/dljubulyn/image/upload/v1784286187/pinnacleexpo/products_floral.png"
 };

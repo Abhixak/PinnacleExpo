@@ -16,15 +16,10 @@ const Home = () => {
               Premium export supply from trusted origins
             </div>
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="max-w-2xl text-3xl font-semibold leading-[0.98] text-[var(--ink)] sm:text-4xl lg:text-6xl">
-                Export-grade rice and lubricants, presented with confidence.
+              <h1 className="my-3 max-w-2xl text-3xl font-semibold leading-[0.98] text-[var(--ink)] sm:text-4xl lg:text-6xl">
+                Export-grade rice, lubricants, and premium fragrances.
               </h1>
-              <p className="max-w-2xl text-sm leading-6 text-slate-600 sm:leading-7 sm:text-base">
-                Pinnacle Expo connects Indian buyers and distributors with
-                high-quality rice from Thailand and premium engine lubricants
-                from Saudi-linked supply channels, wrapped in a modern export
-                buying experience.
-              </p>
+
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 !my-4">
@@ -38,7 +33,7 @@ const Home = () => {
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-white !px-5 !py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-slate-300 hover:bg-slate-50 sm:!px-6"
               >
-                Request a Quote
+                Contact us
               </Link>
             </div>
 
@@ -85,7 +80,7 @@ const Home = () => {
                 <div className="grid grid-cols-3 gap-3 text-center">
                   <div className="rounded-2xl bg-slate-50 !px-2 !py-3 sm:!px-3 sm:!py-4">
                     <p className="text-base font-semibold text-[var(--navy)] sm:text-lg">
-                      03
+                      04
                     </p>
                     <p className="!mt-1 text-[10px] uppercase tracking-[0.14em] text-slate-500 sm:text-[11px] sm:tracking-[0.18em]">
                       Core categories
@@ -114,7 +109,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+
       <Categories />
       <Features />
     </div>

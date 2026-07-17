@@ -14,6 +14,7 @@ const productLinks = [
   { label: "Indian Rice", to: "/products?item=indian-rice" },
   { label: "Jasmine Rice", to: "/products?item=jasmine-rice" },
   { label: "Engine Lubricants", to: "/products?item=engine-lubricants" },
+  { label: "London Colognes", to: "/products?item=london-colognes" },
 ];
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
       <div className="bg-[#10233b] text-white">
         <div className="!mx-auto flex max-w-7xl items-center justify-between gap-4 !px-4 !py-2 text-xs sm:!px-6 lg:!px-8">
           <p className="hidden sm:block tracking-[0.22em] uppercase text-white/75">
-            Exporting rice and lubricants across trusted trade routes
+            Exporting rice, lubricants, and premium fragrances across trusted trade routes
           </p>
           <a
             href="https://www.pinnacleexpo.com"

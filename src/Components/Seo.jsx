@@ -8,32 +8,32 @@ const DEFAULT_IMAGE =
 
 const routeMeta = {
   "/": {
-    title: "Export Rice & Lubricants",
+    title: "Export Rice, Lubricants & Colognes",
     description:
-      "Export rice supplier in India offering Thai jasmine rice, Indian rice varieties, and Saudi-sourced engine lubricants for distributors and bulk buyers.",
+      "Export supplier in India offering Thai jasmine rice, Indian rice varieties, Saudi-sourced engine lubricants, and premium London Colognes fragrances for bulk buyers.",
     keywords:
-      "export rice supplier India, Thai jasmine rice exporter, Indian rice wholesaler, engine lubricants supplier, Saudi lubricants, bulk export",
+      "export rice supplier India, Thai jasmine rice exporter, engine lubricants supplier, London Colognes, wholesale perfumes, bulk export",
   },
   "/about": {
     title: "About Us",
     description:
-      "Learn about Pinnacle Expo, a trusted export partner for rice and engine lubricants with a focus on quality sourcing, transparent communication, and reliable supply.",
+      "Learn about Pinnacle Expo, a trusted export partner for rice, engine lubricants, and premium colognes with a focus on quality sourcing and reliable global supply.",
     keywords:
-      "about Pinnacle Expo, export company India, rice exporter, lubricant supplier",
+      "about Pinnacle Expo, export company India, rice exporter, lubricant supplier, perfume supplier",
   },
   "/contact": {
     title: "Contact Us",
     description:
-      "Contact Pinnacle Expo for export enquiries, bulk rice supply, Thai jasmine rice, Indian rice, and engine lubricant distribution.",
+      "Contact Pinnacle Expo for export enquiries, bulk rice supply, Thai jasmine rice, engine lubricant distribution, and London Colognes wholesale.",
     keywords:
-      "contact export company, rice export enquiry, lubricant distribution contact, Pinnacle Expo contact",
+      "contact export company, rice export enquiry, lubricant distribution, London Colognes wholesale, Pinnacle Expo contact",
   },
   "/products": {
     title: "Products",
     description:
-      "Browse Indian rice, Thai jasmine rice, and engine lubricants from Pinnacle Expo for export, wholesale, and bulk supply requirements.",
+      "Browse Indian rice, Thai jasmine rice, engine lubricants, and London Colognes from Pinnacle Expo for export, wholesale, and bulk supply.",
     keywords:
-      "export products, Thai jasmine rice, Indian rice varieties, engine lubricants, wholesale rice supplier",
+      "export products, Thai jasmine rice, Indian rice, engine lubricants, London Colognes, wholesale fragrances",
   },
 };
 
@@ -72,7 +72,7 @@ const Seo = () => {
 
       pageTitle = `${productName} | ${SITE_NAME}`;
       description = `Browse ${productName.toLowerCase()} at ${SITE_NAME}. Trusted export sourcing for Indian buyers, traders, and bulk orders.`;
-      keywords = `${productName.toLowerCase()}, export products, rice supplier India, engine lubricants`;
+      keywords = `${productName.toLowerCase()}, export products, rice supplier India, engine lubricants, london colognes`;
       canonicalPath = `${location.pathname}?item=${item}`;
     }
 

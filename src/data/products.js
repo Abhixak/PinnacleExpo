@@ -137,4 +137,36 @@ export default [
     description:
       "Hybrid basmati rice variety with a strong aroma and superior grain length, ideal for special cuisines.",
   },
+  {
+    id: 18,
+    name: "Affection (Men)",
+    category: "London Colognes",
+    image: cloudinaryAssets["products.affection"],
+    description:
+      "An elegant, woody scent for men with a warm blend of amber and musk, evoking affection and sophistication.",
+  },
+  {
+    id: 19,
+    name: "Untamed (Men)",
+    category: "London Colognes",
+    image: cloudinaryAssets["products.untamed"],
+    description:
+      "A bold, fresh fragrance for men with rich notes of cedarwood, citrus, and leather, designed for the wild at heart.",
+  },
+  {
+    id: 20,
+    name: "Sensory (Women)",
+    category: "London Colognes",
+    image: cloudinaryAssets["products.sensory"],
+    description:
+      "A captivating floral fragrance for women with sweet notes of jasmine, rose, and vanilla to awaken your senses.",
+  },
+  {
+    id: 21,
+    name: "Floral (Women)",
+    category: "London Colognes",
+    image: cloudinaryAssets["products.floral"],
+    description:
+      "A light, refreshing fragrance for women featuring a delicate bouquet of wild blossoms, fresh-cut grass, and soft musk.",
+  },
 ];

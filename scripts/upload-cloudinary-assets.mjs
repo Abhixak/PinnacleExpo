@@ -141,7 +141,7 @@ if (!cloudName || !apiKey || !apiSecret) {
 const assets = [
   { key: "logo", file: "public/logo.png" },
   { key: "brochure", file: "public/Brochure/Lubricants .pdf" },
-  { key: "video", file: "src/assets/AdVideo01.mp4" },
+  { key: "video", file: "src/assets/hero video.mp4" },
   { key: "categories.rice", file: "src/assets/Categories/Rice.jpeg" },
   { key: "categories.basmati", file: "src/assets/Categories/Basmmati.jpeg" },
   { key: "categories.engine_lubricants", file: "src/assets/Categories/EOil.jpeg" },
@@ -162,6 +162,11 @@ const assets = [
   { key: "products.rice_1509", file: "src/assets/Categories/Products/1509 Rice.jpg" },
   { key: "products.rice_1401", file: "src/assets/Categories/Products/1401 Rice.jpg" },
   { key: "products.rice_1121", file: "src/assets/Categories/Products/1121 Rice.jpg" },
+  { key: "categories.london_colognes", file: "src/assets/Categories/london colognes.png" },
+  { key: "products.affection", file: "src/assets/Categories/Products/Affection.png" },
+  { key: "products.untamed", file: "src/assets/Categories/Products/untamed.png" },
+  { key: "products.sensory", file: "src/assets/Categories/Products/sensory.png" },
+  { key: "products.floral", file: "src/assets/Categories/Products/floral.png" },
 ];
 
 async function uploadAsset(asset) {
@@ -212,14 +217,40 @@ async function uploadAsset(asset) {
   return json.secure_url;
 }
 
+let existingAssets = {};
+try {
+  const modulePath = path.resolve(rootDir, "src/data/cloudinaryAssets.js");
+  if (fs.existsSync(modulePath)) {
+    const content = fs.readFileSync(modulePath, "utf8");
+    const jsonMatch = content.match(/export const cloudinaryAssets = ({[\s\S]*?});/);
+    if (jsonMatch) {
+      existingAssets = eval(`(${jsonMatch[1]})`);
+    }
+  }
+} catch (e) {
+  console.warn("Could not load existing assets, will re-upload all:", e);
+}
+
 const uploaded = {};
 
 for (const asset of assets) {
   const exists =
     asset.key === "brochure" || fs.existsSync(path.join(rootDir, asset.file));
   if (!exists) {
+    if (existingAssets[asset.key]) {
+      uploaded[asset.key] = existingAssets[asset.key];
+      console.log(`Reusing existing URL for ${asset.key}: ${existingAssets[asset.key]} (local file missing)`);
+      continue;
+    }
     throw new Error(`Missing asset file: ${asset.file}`);
   }
+
+  if (existingAssets[asset.key]) {
+    uploaded[asset.key] = existingAssets[asset.key];
+    console.log(`Reusing existing URL for ${asset.key}: ${existingAssets[asset.key]} (already uploaded)`);
+    continue;
+  }
+
   // eslint-disable-next-line no-await-in-loop
   const url = await uploadAsset(asset);
   uploaded[asset.key] = url;

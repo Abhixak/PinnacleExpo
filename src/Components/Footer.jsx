@@ -15,8 +15,8 @@ const Footer = () => {
 
           <p className="!mx-auto max-w-sm text-sm leading-6 text-gray-300 sm:text-base sm:leading-7 lg:mx-0">
             Your trusted partner for global export and authorized
-            distributorship of high-quality Indian & Thai rice and premium
-            engine lubricants.
+            distributorship of high-quality Indian & Thai rice, premium
+            engine lubricants, and luxury fragrances.
           </p>
         </div>
         <div className="!mt-6 flex w-full flex-col max-w-sm !px-4 !py-4 items-center justify-center sm:gap-4 sm:!px-5">

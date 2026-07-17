@@ -16,4 +16,9 @@ export default [
     image: cloudinaryAssets["categories.engine_lubricants"],
     description: "Top-grade lubricants engineered for long-lasting engine performance and protection.",
   },
+  {
+    name: "London Colognes",
+    image: cloudinaryAssets["categories.london_colognes"],
+    description: "Premium, long-lasting fragrances designed to evoke elegance, sophistication, and raw energy.",
+  }
 ];

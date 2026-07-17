@@ -14,7 +14,7 @@ const About = () => {
         </h1>
         <p className="!mx-auto max-w-3xl text-sm leading-6 text-gray-600 sm:leading-7 sm:text-base lg:text-lg">
           Your trusted partner for global export and authorized distributorship
-          of high-quality Indian & Thai rice and premium engine lubricants.
+          of high-quality Indian & Thai rice, premium engine lubricants, and luxury fragrances.
           Connecting tradition with innovation, we deliver excellence across
           borders.
         </p>
@@ -103,6 +103,10 @@ const About = () => {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lg font-bold text-[#059669]">✓</span>
+              <span>Exclusive London Colognes perfumes for men and women</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-lg font-bold text-[#059669]">✓</span>
               <span>Dedicated support team available 24x7</span>
             </li>
           </ul>
@@ -113,7 +117,7 @@ const About = () => {
         <h2 className="!mb-6 text-center text-2xl font-bold text-[#6D28D9] sm:!mb-8 sm:text-3xl">
           Our Product Range
         </h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 sm:gap-6">
           <div className="rounded-xl border border-indigo-100 bg-white !p-4 shadow hover:shadow-lg sm:!p-6">
             <h3 className="!mb-2 text-lg font-semibold text-[#1E3A8A] sm:text-xl">
               Indian Basmati Rice
@@ -139,6 +143,14 @@ const About = () => {
             <p className="text-sm leading-6 text-gray-600 sm:text-base">
               High-performance lubricants designed for industrial and automotive
               applications across global markets.
+            </p>
+          </div>
+          <div className="rounded-xl border border-rose-100 bg-white !p-4 shadow hover:shadow-lg sm:!p-6">
+            <h3 className="!mb-2 text-lg font-semibold text-[#1E3A8A] sm:text-xl">
+              London Colognes
+            </h3>
+            <p className="text-sm leading-6 text-gray-600 sm:text-base">
+              Premium, long-lasting fragrances and colognes crafted to evoke sophistication, elegance, and raw energy.
             </p>
           </div>
         </div>
