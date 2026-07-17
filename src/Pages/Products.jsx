@@ -7,6 +7,16 @@ import { getCallLink, getWhatsAppLink } from "../utils/contactLinks";
 
 const slugToName = (slug) => slug.replace(/-/g, " ");
 
+const getCategoryHighlights = (name) => {
+  const highlights = {
+    "indian rice": ["Export-Grade Sourcing", "Uniform Grain Length", "Custom Bulk Packaging"],
+    "jasmine rice": ["Premium Aromatic Grade", "Naturally Aged Grain", "Gourmet Quality"],
+    "engine lubricants": ["High Thermal Stability", "Anti-Wear Performance", "OEM Grade Certification"],
+    "london colognes": ["Exquisite Sillage", "Long-Lasting Concentrates", "Premium Crafted Glass"]
+  };
+  return highlights[name?.toLowerCase()] || ["Premium Quality Sourced", "Bulk Sourcing Available", "Export Certified"];
+};
+
 const Products = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
@@ -41,23 +51,72 @@ const Products = () => {
   return (
     <section id="products" className="min-h-screen bg-white text-slate-800">
       <div className="!mx-auto max-w-7xl !px-4 !py-6 sm:!px-6 sm:!py-10 lg:!px-8">
-        <h1 className="!mb-5 text-center text-2xl font-bold text-[#005a34] sm:text-4xl">
-          {category?.name || "Our Products"}
-        </h1>
+        {/* Breadcrumb Navigation */}
+        <div className="!mb-6 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          <Link to="/" className="transition hover:text-[#005a34]">Home</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-400">Products</span>
+          <span className="text-slate-300">/</span>
+          <span className="text-[#005a34] font-bold">{category?.name}</span>
+        </div>
 
-        <div className="!mb-8 flex flex-col gap-5 overflow-hidden rounded-3xl bg-gray-50 shadow-md lg:flex-row lg:items-center !p-4 sm:!p-6">
-          <img
-            src={category?.image}
-            alt={category?.name}
-            className="h-44 w-full rounded-2xl object-cover shadow-md sm:h-64 lg:h-80 lg:w-[28rem]"
-          />
-          <div className="space-y-3">
-            <h2 className="text-xl font-semibold text-[#005a34] sm:text-3xl">
+        {/* Category Hero Banner */}
+        <div className="!mb-10 overflow-hidden rounded-[2rem] border border-slate-200/70 bg-[#f8fafc] shadow-sm lg:grid lg:grid-cols-12 lg:gap-0">
+          {/* Image Container */}
+          <div className="relative overflow-hidden lg:col-span-5">
+            <img
+              src={category?.image}
+              alt={category?.name}
+              className="h-56 w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] sm:h-72 lg:h-full lg:min-h-[24rem]"
+            />
+          </div>
+
+          {/* Content Container */}
+          <div className="relative flex flex-col justify-center !p-6 sm:!p-10 lg:col-span-7 lg:!py-10 lg:!pr-12 lg:!pl-8">
+            <div className="flex flex-wrap items-center gap-3 !mb-4">
+
+              <span className="inline-flex items-center rounded-full bg-[#f1f5f9] border border-slate-200 !px-2.5 !py-0.5 text-xs font-semibold text-slate-700">
+                {filteredProducts.length} {filteredProducts.length === 1 ? "Product" : "Products"} Sourced
+              </span>
+            </div>
+
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               {category?.name}
-            </h2>
-            <p className="max-w-2xl text-sm leading-6 text-gray-600 sm:leading-7 sm:text-base">
+            </h1>
+
+            <p className="!mt-4 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
               {category?.description}
             </p>
+
+            {/* Dynamic Features List */}
+            <div className="!mt-8 border-t border-slate-200/80 !pt-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400 !mb-3">
+                Export Specifications
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {getCategoryHighlights(category?.name).map((highlight, index) => (
+                  <span
+                    key={index}
+                    className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white !px-3.5 !py-2 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    <svg
+                      className="h-4 w-4 text-emerald-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {highlight}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
