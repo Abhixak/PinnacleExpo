@@ -144,7 +144,7 @@ const assets = [
   { key: "video", file: "src/assets/hero video.mp4" },
   { key: "categories.rice", file: "src/assets/Categories/Rice.jpeg" },
   { key: "categories.basmati", file: "src/assets/Categories/Basmmati.jpeg" },
-  { key: "categories.engine_lubricants", file: "src/assets/Categories/EOil.jpeg" },
+  { key: "categories.engine_lubricants", file: "src/assets/Categories/lubricants.jpeg" },
   { key: "products.thai_jasmine_rice", file: "src/assets/Categories/Products/Thai Jasmine Rice.jpeg" },
   { key: "products.sugandha_rice", file: "src/assets/Categories/Products/Sugandha Rice.jpg" },
   { key: "products.sona_masoori_rice", file: "src/assets/Categories/Products/Sona Masoori NBR.png" },

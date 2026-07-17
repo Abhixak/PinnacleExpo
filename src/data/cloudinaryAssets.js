@@ -4,7 +4,7 @@ export const cloudinaryAssets = {
   "video": "https://res.cloudinary.com/dljubulyn/video/upload/v1784288586/pinnacleexpo/video.mp4",
   "categories.rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085889/pinnacleexpo/categories_rice.jpg",
   "categories.basmati": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_basmati.jpg",
-  "categories.engine_lubricants": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_engine_lubricants.jpg",
+  "categories.engine_lubricants": "https://res.cloudinary.com/dljubulyn/image/upload/v1784294956/pinnacleexpo/categories_engine_lubricants.jpg",
   "products.thai_jasmine_rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085891/pinnacleexpo/products_thai_jasmine_rice.jpg",
   "products.sugandha_rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085892/pinnacleexpo/products_sugandha_rice.jpg",
   "products.sona_masoori_rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085893/pinnacleexpo/products_sona_masoori_rice.png",
