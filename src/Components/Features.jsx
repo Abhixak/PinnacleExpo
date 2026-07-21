@@ -39,10 +39,10 @@ const Features = () => {
               className="rounded-2xl bg-white !p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg sm:!p-6"
             >
               <div className="!mb-3 flex justify-center">{feature.icon}</div>
-              <h3 className="!mb-2 text-base font-semibold sm:text-xl">
+              <h3 className="!mb-2 text-base font-bold sm:text-xl">
                 {feature.title}
               </h3>
-              <p className="text-xs leading-5 text-gray-900 font-bold sm:text-base sm:leading-6">
+              <p className="text-xs leading-5 text-gray-900 sm:text-base sm:leading-6">
                 {feature.desc}
               </p>
             </div>

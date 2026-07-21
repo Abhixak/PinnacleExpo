@@ -123,7 +123,7 @@ const Products = () => {
           Products under this Category
         </h2>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 sm:gap-6">
+        <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 xl:grid-cols-3 sm:gap-6">
           {filteredProducts.map((product) => (
             <div
               key={product.id}

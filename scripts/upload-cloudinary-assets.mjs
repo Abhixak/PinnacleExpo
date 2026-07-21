@@ -142,6 +142,7 @@ const assets = [
   { key: "logo", file: "public/logo.png" },
   { key: "brochure", file: "public/Brochure/Lubricants .pdf" },
   { key: "video", file: "src/assets/hero video.mp4" },
+  { key: "mobileVideo", file: "src/assets/mobile hero.mp4", forceUpload: true },
   { key: "categories.rice", file: "src/assets/Categories/Rice.jpeg" },
   { key: "categories.basmati", file: "src/assets/Categories/Basmmati.jpeg" },
   { key: "categories.engine_lubricants", file: "src/assets/Categories/lubricants.jpeg" },
@@ -245,7 +246,7 @@ for (const asset of assets) {
     throw new Error(`Missing asset file: ${asset.file}`);
   }
 
-  if (existingAssets[asset.key]) {
+  if (existingAssets[asset.key] && !asset.forceUpload) {
     uploaded[asset.key] = existingAssets[asset.key];
     console.log(`Reusing existing URL for ${asset.key}: ${existingAssets[asset.key]} (already uploaded)`);
     continue;

@@ -16,8 +16,7 @@ const Categories = () => {
 
   const categorySections = categories
     .filter(
-      (category) =>
-        !selectedCategory || category.name === selectedCategory
+      (category) => !selectedCategory || category.name === selectedCategory,
     )
     .map((category) => ({
       ...category,
@@ -26,38 +25,37 @@ const Categories = () => {
 
   return (
     <>
+      <div className="text-center">
+        <h2 className="!mx-auto !mt-4 inline-flex w-fit items-center justify-center rounded-full border border-[#313268] bg-gradient-to-r from-[#fdf4ff] via-[#faf8ff] to-[#fdf4ff] !px-4 !py-2 text-xl font-semibold tracking-tight text-[#313268] shadow-md sm:!px-5 sm:text-3xl">
+          Explore Our Categories
+        </h2>
+      </div>
       <section className="!px-4 !py-5 sm:!px-6 sm:!py-10 lg:!px-8">
         <div className="!mx-auto max-w-7xl rounded-[2rem] bg-[#fffade] !px-4 !py-4 text-slate-800 shadow-sm sm:!px-6 sm:!py-6">
-          <div className="text-center">
-            <h2 className="!mx-auto inline-flex w-fit items-center justify-center rounded-full border border-[#313268] bg-gradient-to-r from-[#fdf4ff] via-[#faf8ff] to-[#fdf4ff] !px-4 !py-2 text-xl font-semibold tracking-tight text-[#313268] shadow-md sm:!px-5 sm:text-3xl">
-              Explore Our Categories
-            </h2>
-          </div>
-
           <CategoryGrid
             categories={categories}
             selectedCategory={selectedCategory}
             onSelect={handleCategoryClick}
           />
 
-          <div className="!mt-6 ">
+          <div className="!my-4 ">
             {categorySections.map((category) => (
-              <div key={category.name} className="space-y-4">
+              <div key={category.name} className="!mb-4">
                 <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
-                  <div className="!my-2">
+                  <div>
                     <h3 className="text-xl font-bold text-[#313268] sm:text-2xl">
                       {category.name}
                     </h3>
-                    <p className="text-sm text-gray-600 sm:text-base">
+                    <p className="text-sm !mb-2 text-gray-600 sm:text-base">
                       {category.description}
                     </p>
                   </div>
-                  <span className="inline-flex !my-1 rounded-full border border-[#313268]/15 bg-white !px-3 !py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#313268]">
+                  <span className="md:inline-flex !my-1 hidden rounded-full border border-[#313268]/15 bg-white !px-3 !py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#313268]">
                     {category.products.length} products
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 sm:gap-6">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6">
                   <AnimatePresence>
                     {category.products.map((prod) => (
                       <motion.div

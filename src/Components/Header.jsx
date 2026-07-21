@@ -26,9 +26,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-[#10233b] text-white">
+      <div className="hidden bg-[#10233b] text-white sm:block">
         <div className="!mx-auto flex max-w-7xl items-center justify-between gap-4 !px-4 !py-2 text-xs sm:!px-6 lg:!px-8">
-          <p className="hidden sm:block tracking-[0.22em] uppercase text-white/75">
+          <p className="tracking-[0.22em] uppercase text-white/75">
             Exporting rice, lubricants, and premium fragrances
           </p>
           <a
@@ -60,13 +60,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="border-b border-[var(--line)] bg-white/82 backdrop-blur-xl">
-        <div className="!mx-auto flex max-w-7xl items-center justify-between gap-4 !px-4 !py-4 sm:!px-6 lg:!px-8">
-          <Link to="/" className="flex items-center gap-4">
+      <div className="border-b border-[var(--line)] bg-white/90 backdrop-blur-xl">
+        <div className="!mx-auto flex max-w-7xl items-center justify-between gap-3 !px-6 sm:gap-4 ">
+          <Link to="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
             <img
               src={cloudinaryAssets.logo}
               alt="Pinnacle Expo"
-              className="h-12 w-auto rounded-xl object-contain shadow-sm ring-1 ring-black/5 sm:h-16"
+              className="h-22 w-auto shrink-0 rounded-xl object-contain sm:h-26"
             />
             <div className="hidden sm:block">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--blue)]">
@@ -124,8 +124,9 @@ const Header = () => {
           <button
             type="button"
             onClick={() => setIsOpen(true)}
-            className="inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-white !p-3 text-[var(--ink)] shadow-sm md:hidden"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--line)] bg-white text-[var(--ink)] shadow-sm md:hidden"
             aria-label="Open menu"
+            aria-expanded={isOpen}
           >
             <FaBars />
           </button>

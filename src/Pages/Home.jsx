@@ -10,7 +10,7 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <AdVideo01 />
       <section className="!px-4 !pt-4 !pb-6 sm:!px-6 sm:!pt-8 sm:!pb-10 lg:!px-8">
-        <div className="!mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="!mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 lg:grid-cols-2">
           <div className="space-y-5 sm:space-y-6">
             <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-[var(--line)] bg-white/80 !px-3 !py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--blue)] shadow-sm sm:!px-4 !mb-2 sm:text-xs sm:tracking-[0.22em]">
               Premium export supply from trusted origins
@@ -36,7 +36,7 @@ const Home = () => {
                 Contact us
               </Link>
             </div>
-
+</div><div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-[var(--line)] bg-white/85 !p-3 shadow-sm sm:!p-4">
                 <FaShip className="text-lg text-[var(--gold)] sm:text-xl" />
@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(31,93,139,0.14),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(199,154,75,0.14),transparent_42%)] blur-2xl" />
             <div className="overflow-hidden rounded-[2rem] border border-[var(--line)] bg-white shadow-[0_20px_60px_rgba(16,35,59,0.14)]">
               <img
@@ -96,7 +96,7 @@ const Home = () => {
                   </div>
                   <div className="rounded-2xl bg-slate-50 !px-2 !py-3 sm:!px-3 sm:!py-4">
                     <p className="text-base font-semibold text-[var(--navy)] sm:text-lg">
-                      Bulk
+                      Bulk/
                     </p>
                     <p className="!mt-1 text-[10px] uppercase tracking-[0.14em] text-slate-500 sm:text-[11px] sm:tracking-[0.18em]">
                       Orders
@@ -105,7 +105,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

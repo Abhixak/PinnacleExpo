@@ -2,6 +2,7 @@ export const cloudinaryAssets = {
   "logo": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085728/pinnacleexpo/logo.png",
   "brochure": "https://res.cloudinary.com/dljubulyn/raw/upload/v1779085828/pinnacleexpo/brochure",
   "video": "https://res.cloudinary.com/dljubulyn/video/upload/v1784288586/pinnacleexpo/video.mp4",
+  "mobileVideo": "https://res.cloudinary.com/dljubulyn/video/upload/v1784622824/pinnacleexpo/mobilevideo.mp4",
   "categories.rice": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085889/pinnacleexpo/categories_rice.jpg",
   "categories.basmati": "https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_basmati.jpg",
   "categories.engine_lubricants": "https://res.cloudinary.com/dljubulyn/image/upload/v1784294956/pinnacleexpo/categories_engine_lubricants.jpg",

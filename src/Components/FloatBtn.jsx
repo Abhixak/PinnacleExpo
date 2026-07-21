@@ -38,7 +38,7 @@ const FloatBtn = () => {
   };
 
   return (
-    <div className="fixed bottom-3 right-3 z-50 sm:bottom-6 sm:right-6">
+    <div className="fixed bottom-10 right-6 z-50 sm:bottom-6 ">
       <div className="relative flex flex-col items-center justify-end">
         <AnimatePresence>
           {isOpen && (
@@ -92,7 +92,7 @@ const FloatBtn = () => {
           animate={!isOpen ? "animate" : ""}
           variants={!isOpen ? heartbeat : {}}
         >
-          <FaHeadset className="h-5 w-5" />
+          <FaHeadset className="h-8 w-8 md:h-5 md:w-5" />
         </motion.button>
       </div>
     </div>
