@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import products from "../data/products.js";
 
 const SITE_NAME = "Pinnacle Expo";
 const SITE_URL = "https://www.pinnacleexpo.com";
@@ -8,32 +9,32 @@ const DEFAULT_IMAGE =
 
 const routeMeta = {
   "/": {
-    title: "Export Rice, Lubricants & Colognes",
+    title: "Pinnacle Expo | Export Rice, Engine Lubricants & London Colognes",
     description:
-      "Export supplier in India offering Thai jasmine rice, Indian rice varieties, Saudi-sourced engine lubricants, and premium London Colognes fragrances for bulk buyers.",
+      "Pinnacle Expo (Pinnacle Group Mohali) is a leading export supplier of Indian basmati rice, Thai jasmine rice, premium engine lubricants, and London Colognes perfumes for single or bulk orders.",
     keywords:
-      "export rice supplier India, Thai jasmine rice exporter, engine lubricants supplier, London Colognes, wholesale perfumes, bulk export",
+      "Pinnacle Expo Mohali, Pinnacle Group, export rice supplier India, Thai jasmine rice exporter, Indian basmati rice, engine lubricants supplier, London Colognes perfumes, wholesale perfumes, bulk perfume orders, single and bulk orders India",
   },
   "/about": {
-    title: "About Us",
+    title: "About Us | Pinnacle Expo",
     description:
-      "Learn about Pinnacle Expo, a trusted export partner for rice, engine lubricants, and premium colognes with a focus on quality sourcing and reliable global supply.",
+      "Learn about Pinnacle Expo (Pinnacle Group), your trusted export partner in Mohali, India, for premium rice, engine lubricants, and London Colognes fragrances with a focus on global wholesale supply.",
     keywords:
-      "about Pinnacle Expo, export company India, rice exporter, lubricant supplier, perfume supplier",
+      "about Pinnacle Expo, export company Mohali, Pinnacle Group Punjab, rice exporter India, lubricant supplier, perfume supplier",
   },
   "/contact": {
-    title: "Contact Us",
+    title: "Contact Us | Pinnacle Expo",
     description:
-      "Contact Pinnacle Expo for export enquiries, bulk rice supply, Thai jasmine rice, engine lubricant distribution, and London Colognes wholesale.",
+      "Get in touch with Pinnacle Expo in Mohali, India, for export enquiries, bulk rice supply, Thai jasmine rice, engine lubricants distribution, and London Colognes wholesale/bulk orders.",
     keywords:
-      "contact export company, rice export enquiry, lubricant distribution, London Colognes wholesale, Pinnacle Expo contact",
+      "contact Pinnacle Expo, export company contact Mohali, rice export enquiry, lubricant distribution, London Colognes wholesale, Pinnacle Expo phone number",
   },
   "/products": {
-    title: "Products",
+    title: "Our Products | Pinnacle Expo",
     description:
-      "Browse Indian rice, Thai jasmine rice, engine lubricants, and London Colognes from Pinnacle Expo for export, wholesale, and bulk supply.",
+      "Explore premium Indian basmati rice, Thai jasmine rice, engine lubricants, and London Colognes fragrances available for single or bulk export orders from Pinnacle Expo.",
     keywords:
-      "export products, Thai jasmine rice, Indian rice, engine lubricants, London Colognes, wholesale fragrances",
+      "export products, Thai jasmine rice bulk, Indian basmati rice wholesale, engine lubricants, London Colognes perfumes, single and bulk order fragrances",
   },
 };
 
@@ -59,20 +60,21 @@ const Seo = () => {
     const item = searchParams.get("item");
     const route = routeMeta[location.pathname] ?? routeMeta["/"];
 
-    let pageTitle = `${route.title} | ${SITE_NAME}`;
+    let pageTitle = route.title;
     let description = route.description;
     let keywords = route.keywords;
     let canonicalPath = location.pathname;
+    let productName = "";
 
     if (location.pathname === "/products" && item) {
-      const productName = item
+      productName = item
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 
       pageTitle = `${productName} | ${SITE_NAME}`;
-      description = `Browse ${productName.toLowerCase()} at ${SITE_NAME}. Trusted export sourcing for Indian buyers, traders, and bulk orders.`;
-      keywords = `${productName.toLowerCase()}, export products, rice supplier India, engine lubricants, london colognes`;
+      description = `Buy premium ${productName.toLowerCase()} online at ${SITE_NAME}. Available for single and bulk export orders with worldwide shipping.`;
+      keywords = `${productName.toLowerCase()} wholesale, bulk ${productName.toLowerCase()}, export ${productName.toLowerCase()}, Pinnacle Expo Mohali, engine lubricants, London Colognes`;
       canonicalPath = `${location.pathname}?item=${item}`;
     }
 
@@ -109,15 +111,20 @@ const Seo = () => {
       document.head.appendChild(schema);
     }
 
-    schema.textContent = JSON.stringify(
+    const isLondonColognes = location.pathname === "/products" && item === "london-colognes";
+
+    const graph = [
       {
-        "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
         name: SITE_NAME,
         url: SITE_URL,
         logo: DEFAULT_IMAGE,
-        description,
-        sameAs: [],
+        description: description,
+        sameAs: [
+          "https://instagram.com/londoncolognes",
+          "https://www.facebook.com/share/1HojJAz8xj/"
+        ],
         contactPoint: [
           {
             "@type": "ContactPoint",
@@ -127,6 +134,101 @@ const Seo = () => {
             availableLanguage: ["English", "Hindi"],
           },
         ],
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": isLondonColognes 
+          ? `${SITE_URL}${canonicalPath}/#localbusiness`
+          : `${SITE_URL}/#localbusiness`,
+        name: isLondonColognes ? "London Colognes" : "Pinnacle Group",
+        url: isLondonColognes ? `${SITE_URL}${canonicalPath}` : SITE_URL,
+        logo: DEFAULT_IMAGE,
+        image: DEFAULT_IMAGE,
+        description: isLondonColognes
+          ? "London Colognes offers premium, long-lasting fragrances designed to evoke elegance, sophistication, and raw energy."
+          : "Pinnacle Group (Pinnacle Expo) is a premium global exporter of high-quality Indian & Thai rice, engine lubricants, and luxury fragrances.",
+        telephone: "+91 9216399808",
+        priceRange: "$$",
+        hasMap: "https://maps.app.goo.gl/p1RB4rmxT3u5guAr9",
+        sameAs: [
+          "https://maps.app.goo.gl/p1RB4rmxT3u5guAr9"
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "SCF 124, First Floor, Phase 11",
+          addressLocality: "Mohali",
+          addressRegion: "Punjab",
+          postalCode: "160062",
+          addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 30.678038,
+          longitude: 76.745471,
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "10:00",
+            closes: "19:00",
+          },
+        ],
+      }
+    ];
+
+    if (location.pathname === "/products" && item) {
+      const categoryName = item.replace(/-/g, " ");
+      const categoryProducts = products.filter(
+        (p) => p.category.toLowerCase() === categoryName.toLowerCase()
+      );
+
+      if (categoryProducts.length > 0) {
+        graph.push({
+          "@type": "ItemList",
+          "@id": `${SITE_URL}${canonicalPath}/#itemlist`,
+          name: `${productName} Sourced Products`,
+          description: `List of premium ${productName.toLowerCase()} products offered by Pinnacle Expo.`,
+          numberOfItems: categoryProducts.length,
+          itemListElement: categoryProducts.map((prod, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            item: {
+              "@type": "Product",
+              name: prod.name,
+              image: prod.image,
+              description: prod.description,
+              category: prod.category,
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "INR",
+                offers: [
+                  {
+                    "@type": "Offer",
+                    url: `${SITE_URL}/contact`,
+                    itemCondition: "https://schema.org/NewCondition",
+                    availability: "https://schema.org/InStock",
+                  }
+                ]
+              }
+            }
+          }))
+        });
+      }
+    }
+
+    schema.textContent = JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@graph": graph,
       },
       null,
       2

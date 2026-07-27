@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram } from "react-icons/fa";
 import { cloudinaryAssets } from "../data/cloudinaryAssets";
 
 const Footer = () => {
@@ -18,10 +18,34 @@ const Footer = () => {
             distributorship of high-quality Indian & Thai rice, premium
             engine lubricants, and luxury fragrances.
           </p>
+
+          <div className="!mt-4 flex flex-col items-center gap-2">
+            <span className="text-xs uppercase tracking-[0.1em] text-gray-400 font-semibold">
+              London Colognes
+            </span>
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/share/1HojJAz8xj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 !px-3 !py-1.5 text-xs text-gray-300 transition duration-300 hover:border-blue-500 hover:bg-blue-600 hover:text-white"
+              >
+                <FaFacebook className="text-sm" /> Facebook
+              </a>
+              <a
+                href="https://instagram.com/londoncolognes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 !px-3 !py-1.5 text-xs text-gray-300 transition duration-300 hover:border-pink-500 hover:bg-pink-600 hover:text-white"
+              >
+                <FaInstagram className="text-sm" /> Instagram
+              </a>
+            </div>
+          </div>
         </div>
         <div className="!mt-6 flex w-full flex-col max-w-sm !px-4 !py-4 items-center justify-center sm:gap-4 sm:!px-5">
           <img
-            src="/BRICS.jpg"
+            src={cloudinaryAssets.brics}
             alt="Verified BRICS Member"
             className="w-24 rounded-sm object-contain shadow-sm sm:w-32 md:w-40"
           />

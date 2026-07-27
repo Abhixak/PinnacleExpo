@@ -21,7 +21,7 @@ const About = () => {
 
         <div className="!mt-6 flex flex-col items-center rounded-2xl border border-[var(--line)] bg-white/80 !px-4 !py-4 shadow-sm sm:flex-row sm:gap-4">
           <img
-            src="/BRICS.jpg"
+            src={cloudinaryAssets.brics}
             alt="Verified BRICS Member"
             className=" w-26 rounded-sm object-contain shadow-sm sm:w-36 lg:w-40"
           />

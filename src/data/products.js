@@ -43,6 +43,30 @@ export default [
   },
   {
     id: 6,
+    name: "Jasmine Rice",
+    category: "Jasmine Rice",
+    image: cloudinaryAssets["products.jasmine1"],
+    description:
+      "Premium aromatic jasmine rice with a soft texture and delicate fragrance.",
+  },
+  {
+    id: 7,
+    name: "Jasmine Rice",
+    category: "Jasmine Rice",
+    image: cloudinaryAssets["products.jasmine2"],
+    description:
+      "Selected jasmine rice grain offering a light aroma and refined, fluffy finish.",
+  },
+  {
+    id: 8,
+    name: "Jasmine Rice",
+    category: "Jasmine Rice",
+    image: cloudinaryAssets["products.jasmine3"],
+    description:
+      "Classic jasmine rice with long grains, a clean scent, and a tender cooked texture.",
+  },
+  {
+    id: 9,
     name: "Sona Masoori Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.sona_masoori_rice"],
@@ -50,7 +74,7 @@ export default [
       "Sona Masoori Non-Basmati Rice: Soft, lightweight, and aromatic rice ideal for everyday meals like pulao and pongal.",
   },
   {
-    id: 7,
+    id: 10,
     name: "Sharbati Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.sharbati_rice"],
@@ -58,7 +82,7 @@ export default [
       "Sharbati Non-Basmati Rice: Aromatic and flavorful long-grain rice perfect for biryani, khichdi, and other Indian dishes.",
   },
   {
-    id: 8,
+    id: 11,
     name: "Sugandha Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.sugandha_rice"],
@@ -66,7 +90,7 @@ export default [
       "Sugandha Non-Basmati Rice: Mildly aromatic long-grain rice, an affordable alternative to basmati, great for everyday use.",
   },
   {
-    id: 9,
+    id: 12,
     name: "Parmal Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.parmal_rice"],
@@ -74,7 +98,7 @@ export default [
       "Parmal Non-Basmati Rice: Economical rice variety with slender grains, commonly used in large-scale cooking and catering.",
   },
   {
-    id: 10,
+    id: 13,
     name: "PR11 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.pr11_rice"],
@@ -82,7 +106,7 @@ export default [
       "PR11 Non-Basmati Rice: Long grain rice with good cooking quality and fluffiness, used widely in South Asian kitchens.",
   },
   {
-    id: 11,
+    id: 14,
     name: "PR14 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.pr14_rice"],
@@ -90,7 +114,7 @@ export default [
       "PR14 Non-Basmati Rice: High-yield rice variety with excellent texture, used in various traditional and modern recipes.",
   },
   {
-    id: 12,
+    id: 15,
     name: "Ponni Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.ponni_rice"],
@@ -98,7 +122,7 @@ export default [
       "Ponni Non-Basmati Rice: Popular South Indian rice known for its softness and nutritional value, perfect for steamed dishes.",
   },
   {
-    id: 13,
+    id: 16,
     name: "1121 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.rice_1121"],
@@ -106,7 +130,7 @@ export default [
       "Extra-long grain basmati rice with excellent elongation, widely used in royal biryanis and pulao.",
   },
   {
-    id: 14,
+    id: 17,
     name: "1718 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.rice_1718"],
@@ -114,7 +138,7 @@ export default [
       "Highly aromatic hybrid basmati with long grains and great cooking quality, ideal for exports.",
   },
   {
-    id: 15,
+    id: 18,
     name: "1509 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.rice_1509"],
@@ -122,7 +146,7 @@ export default [
       "Early-maturing basmati variety with long grains, subtle aroma, and high yield.",
   },
   {
-    id: 16,
+    id: 19,
     name: "1401 Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.rice_1401"],
@@ -130,7 +154,7 @@ export default [
       "Popular long-grain basmati with soft texture and rich aroma, suited for daily and festive meals.",
   },
   {
-    id: 17,
+    id: 20,
     name: "Pusa Rice",
     category: "Indian Rice",
     image: cloudinaryAssets["products.pusa_rice"],
@@ -138,7 +162,7 @@ export default [
       "Hybrid basmati rice variety with a strong aroma and superior grain length, ideal for special cuisines.",
   },
   {
-    id: 18,
+    id: 21,
     name: "Affection (Men)",
     category: "London Colognes",
     image: cloudinaryAssets["products.affection"],
@@ -146,7 +170,7 @@ export default [
       "An elegant, woody scent for men with a warm blend of amber and musk, evoking affection and sophistication.",
   },
   {
-    id: 19,
+    id: 22,
     name: "Untamed (Men)",
     category: "London Colognes",
     image: cloudinaryAssets["products.untamed"],
@@ -154,7 +178,7 @@ export default [
       "A bold, fresh fragrance for men with rich notes of cedarwood, citrus, and leather, designed for the wild at heart.",
   },
   {
-    id: 20,
+    id: 23,
     name: "Sensory (Women)",
     category: "London Colognes",
     image: cloudinaryAssets["products.sensory"],
@@ -162,7 +186,7 @@ export default [
       "A captivating floral fragrance for women with sweet notes of jasmine, rose, and vanilla to awaken your senses.",
   },
   {
-    id: 21,
+    id: 24,
     name: "Floral (Women)",
     category: "London Colognes",
     image: cloudinaryAssets["products.floral"],

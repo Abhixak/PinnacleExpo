@@ -9,9 +9,17 @@ import { motion, AnimatePresence } from "framer-motion";
 const Categories = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState({});
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat === selectedCategory ? null : cat);
+  };
+
+  const handleViewMore = (categoryName) => {
+    setExpandedCategories((current) => ({
+      ...current,
+      [categoryName]: true,
+    }));
   };
 
   const categorySections = categories
@@ -55,9 +63,18 @@ const Categories = () => {
                   </span>
                 </div>
 
+                {(() => {
+                  const isExpanded = Boolean(expandedCategories[category.name]);
+                  const visibleProducts = isExpanded
+                    ? category.products
+                    : category.products.slice(0, 4);
+                  const hasMoreProducts = category.products.length > 4;
+
+                  return (
+                    <>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6">
                   <AnimatePresence>
-                    {category.products.map((prod) => (
+                    {visibleProducts.map((prod) => (
                       <motion.div
                         key={prod.id}
                         layout
@@ -105,6 +122,21 @@ const Categories = () => {
                     ))}
                   </AnimatePresence>
                 </div>
+
+                {hasMoreProducts && !isExpanded && (
+                  <div className="!mt-4 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => handleViewMore(category.name)}
+                      className="inline-flex items-center justify-center rounded-full border border-[#313268] bg-white !px-5 !py-2.5 text-sm font-semibold text-[#313268] shadow-sm transition hover:bg-slate-50"
+                    >
+                      View More
+                    </button>
+                  </div>
+                )}
+                    </>
+                  );
+                })()}
               </div>
             ))}
           </div>

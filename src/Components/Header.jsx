@@ -23,6 +23,11 @@ const Header = () => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
+  const activeProductSlug = new URLSearchParams(location.search).get("item");
+  const isActiveProductLink = (to) => {
+    if (!activeProductSlug) return false;
+    return to === `/products?item=${activeProductSlug}`;
+  };
 
   return (
     <header className="sticky top-0 z-50">
@@ -98,7 +103,11 @@ const Header = () => {
                         <Link
                           key={product.to}
                           to={product.to}
-                          className="block rounded-xl !px-4 !py-3 text-sm text-slate-700 transition hover:bg-slate-50 hover:text-[var(--navy)]"
+                          className={`block rounded-xl !px-4 !py-3 text-sm transition ${
+                            isActiveProductLink(product.to)
+                              ? "bg-[var(--navy)] text-white shadow-sm"
+                              : "text-slate-700 hover:bg-slate-50 hover:text-[var(--navy)]"
+                          }`}
                         >
                           {product.label}
                         </Link>
@@ -186,7 +195,11 @@ const Header = () => {
                             key={product.to}
                             to={product.to}
                             onClick={() => setIsOpen(false)}
-                            className="rounded-xl bg-white !px-4 !py-2.5 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
+                            className={`rounded-xl !px-4 !py-2.5 text-sm transition ${
+                              isActiveProductLink(product.to)
+                                ? "bg-[var(--navy)] text-white"
+                                : "bg-white text-slate-700 hover:bg-slate-100 hover:text-[var(--navy)]"
+                            }`}
                           >
                             {product.label}
                           </Link>

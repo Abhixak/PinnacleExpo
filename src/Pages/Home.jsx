@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { FaCheckCircle, FaGlobeAmericas, FaShip } from "react-icons/fa";
-import { cloudinaryAssets } from "../data/cloudinaryAssets";
 import Categories from "./Categories";
 import AdVideo01 from "../Components/AdVideo01";
 import Features from "../Components/Features";
@@ -9,17 +8,16 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <AdVideo01 />
-      <section className="!px-4 !pt-4 !pb-6 sm:!px-6 sm:!pt-8 sm:!pb-10 lg:!px-8">
+      <section className="!mt-3 !px-4 !pt-4 !pb-6 sm:!px-6 sm:!pt-8 sm:!pb-10 lg:!px-8">
         <div className="!mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 lg:grid-cols-2">
           <div className="space-y-5 sm:space-y-6">
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-[var(--line)] bg-white/80 !px-3 !py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--blue)] shadow-sm sm:!px-4 !mb-2 sm:text-xs sm:tracking-[0.22em]">
+            <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-[var(--line)] bg-white/80 !px-3 !py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--blue)] shadow-sm sm:!px-4 !mb-2 sm:text-xs sm:tracking-[0.22em]">
               Premium export supply from trusted origins
             </div>
             <div className="space-y-3 sm:space-y-4">
               <h1 className="my-3 max-w-2xl text-3xl font-semibold leading-[0.98] text-[var(--ink)] sm:text-4xl lg:text-6xl">
                 Export-grade rice, lubricants, and premium fragrances.
               </h1>
-
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 !my-4">
@@ -36,7 +34,8 @@ const Home = () => {
                 Contact us
               </Link>
             </div>
-</div><div>
+          </div>
+          <div className="sm:block hidden">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-[var(--line)] bg-white/85 !p-3 shadow-sm sm:!p-4">
                 <FaShip className="text-lg text-[var(--gold)] sm:text-xl" />

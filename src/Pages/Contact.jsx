@@ -143,13 +143,13 @@ const Contact = () => {
 
           <div className="min-h-[260px] overflow-hidden rounded-3xl shadow-md sm:min-h-[420px] lg:min-h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.4385414839744!2d76.74534417537078!3d30.67793507461078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0f88a2d025%3A0x7888af2f001aa06!2sPinnacle%20Group!5e0!3m2!1sen!2sin!4v1754308058516!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.4348992876858!2d76.74547117527638!3d30.678037588274528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed8c11c7ac13%3A0xe6149876f9e01ad5!2sLondon%20Colognes!5e0!3m2!1sen!2sin!4v1785151380115!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
               className="h-full w-full"
             ></iframe>
           </div>
