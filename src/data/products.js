@@ -163,34 +163,134 @@ export default [
   },
   {
     id: 21,
-    name: "Affection (Men)",
+    name: "Affection",
+    slug: "affection",
     category: "London Colognes",
     image: cloudinaryAssets["products.affection"],
     description:
-      "An elegant, woody scent for men with a warm blend of amber and musk, evoking affection and sophistication.",
+      "An elegant, warm fragrance featuring a sweet, rich blend of bergamot, apple, and warm vanilla notes.",
+    notes: {
+      top: "Bergamot, Apple, Lavender",
+      heart: "Cinnamon, Iris, Cedar",
+      base: "Vanilla, Amber, Musk",
+    },
+    longevity: "10–12 Hours",
+    concentration: "40% (Extrait de Parfum)",
+    usage: "Spray onto your pulse points: wrists, neck, and behind the ears. Do not rub the fragrance into the skin, as this breaks down the top notes.",
+    benefits: [
+      "Super High 40% Concentration (Extrait de Parfum)",
+      "Warm fruity, sweet, and comforting blend",
+      "Hypoallergenic & gentle on skin",
+    ],
+    faqs: [
+      {
+        q: "How long does Affection last?",
+        a: "Affection is formulated at a premium 40% oil concentration (Extrait de Parfum), ensuring it stays on the skin for 10–12 hours.",
+      },
+      {
+        q: "What are the scent notes of Affection?",
+        a: "Affection opens with Bergamot, Apple, and Lavender; transitions to Cinnamon, Iris, and Cedar; and finishes with a base of Vanilla, Amber, and Musk.",
+      },
+    ],
+    ingredients: "Alcohol Denat., Fragrance (Parfum), Aqua (Water), Limonene, Linalool, Coumarin, Citral, Geraniol.",
   },
   {
     id: 22,
-    name: "Untamed (Men)",
+    name: "Untamed",
+    slug: "untamed",
     category: "London Colognes",
     image: cloudinaryAssets["products.untamed"],
     description:
-      "A bold, fresh fragrance for men with rich notes of cedarwood, citrus, and leather, designed for the wild at heart.",
+      "A bold, fresh fragrance with rich notes of pepper, lavender, and cedarwood designed for the wild at heart.",
+    notes: {
+      top: "Bergamot, Pepper",
+      heart: "Lavender, Sichuan Pepper, Geranium",
+      base: "Ambroxan, Cedarwood, Vetiver",
+    },
+    longevity: "10–12 Hours",
+    concentration: "40% (Extrait de Parfum)",
+    usage: "Apply on clean, dry skin. Ideal for spraying on collarbones and chest to project the bold woody profile.",
+    benefits: [
+      "Super High 40% Concentration (Extrait de Parfum)",
+      "Bold and fresh spicy-woody sillage",
+      "Premium long-lasting formula",
+    ],
+    faqs: [
+      {
+        q: "What makes Untamed unique?",
+        a: "Untamed features a fresh spicy profile with Bergamot and Pepper top notes, transitioning to Lavender and Sichuan Pepper, and settling into Ambroxan, Cedarwood, and Vetiver.",
+      },
+      {
+        q: "How long does Untamed last?",
+        a: "With a 40% concentration (Extrait de Parfum), Untamed lasts for 10–12 hours on skin and even longer on garments.",
+      },
+    ],
+    ingredients: "Alcohol Denat., Fragrance (Parfum), Aqua (Water), Linalool, Limonene, Citronellol, Alpha-Isomethyl Ionone, Citral.",
   },
   {
     id: 23,
-    name: "Sensory (Women)",
+    name: "Sensory",
+    slug: "sensory",
     category: "London Colognes",
     image: cloudinaryAssets["products.sensory"],
     description:
-      "A captivating floral fragrance for women with sweet notes of jasmine, rose, and vanilla to awaken your senses.",
+      "A captivating, fresh aquatic fragrance with a sweet blend of citrus aromatic notes to awaken your senses.",
+    notes: {
+      top: "Bergamot, Lemon, Apple",
+      heart: "Marine Notes, Cinnamon, Cardamom",
+      base: "Ambergris, Musk, Driftwood",
+    },
+    longevity: "10–12 Hours",
+    concentration: "40% (Extrait de Parfum)",
+    usage: "Mist lightly over hair or spray onto inner elbows and wrists for a subtle, long-lasting scent trail.",
+    benefits: [
+      "Super High 40% Concentration (Extrait de Parfum)",
+      "Fresh aquatic and aromatic citrus blend",
+      "Excellent sillage that leaves a captivating trail",
+    ],
+    faqs: [
+      {
+        q: "What does Sensory smell like?",
+        a: "Sensory is a fresh aquatic and citrus aromatic scent. It opens with Bergamot, Lemon, and Apple, followed by Marine Notes, Cinnamon, and Cardamom, and dries down to Ambergris, Musk, and Driftwood.",
+      },
+      {
+        q: "How long does Sensory last?",
+        a: "Thanks to its 40% oil concentration (Extrait de Parfum), Sensory offers outstanding longevity of 10–12 hours.",
+      },
+    ],
+    ingredients: "Alcohol Denat., Fragrance (Parfum), Aqua (Water), Benzyl Salicylate, Hexyl Cinnamal, Linalool, Hydroxycitronellal.",
   },
   {
     id: 24,
-    name: "Floral (Women)",
+    name: "Floral",
+    slug: "floral",
     category: "London Colognes",
     image: cloudinaryAssets["products.floral"],
     description:
-      "A light, refreshing fragrance for women featuring a delicate bouquet of wild blossoms, fresh-cut grass, and soft musk.",
+      "A delicate, soft sweet fragrance featuring a beautiful bouquet of citrus, peony, rose, and soft musk.",
+    notes: {
+      top: "Citrus, Peony",
+      heart: "Rose, Osmanthus",
+      base: "Sandalwood, Patchouli, Musk",
+    },
+    longevity: "10–12 Hours",
+    concentration: "40% (Extrait de Parfum)",
+    usage: "Spray on pulse points immediately after a shower while your pores are open to maximize longevity.",
+    benefits: [
+      "Super High 40% Concentration (Extrait de Parfum)",
+      "Delicate floral and soft sweet scent profile",
+      "Hypoallergenic and gentle on skin",
+    ],
+    faqs: [
+      {
+        q: "What are the notes in Floral?",
+        a: "Floral opens with fresh Citrus and Peony, shifts to Rose and Osmanthus in the heart, and finishes with Sandalwood, Patchouli, and Musk at the base.",
+      },
+      {
+        q: "How long does Floral last?",
+        a: "Formulated as a 40% Extrait de Parfum, Floral provides an impressive 10–12 hours of longevity on the skin.",
+      },
+    ],
+    ingredients: "Alcohol Denat., Fragrance (Parfum), Aqua (Water), Citronellol, Geraniol, Linalool, Benzyl Benzoate, Eugenol.",
   },
 ];

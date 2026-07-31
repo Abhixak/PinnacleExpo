@@ -6,15 +6,15 @@ import { cloudinaryAssets } from "../data/cloudinaryAssets";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Products", to: "/products" },
+  { label: "Brands", to: "/london-colognes" },
   { label: "Contact", to: "/contact" },
 ];
 
-const productLinks = [
-  { label: "Indian Rice", to: "/products?item=indian-rice" },
-  { label: "Jasmine Rice", to: "/products?item=jasmine-rice" },
-  { label: "Engine Lubricants", to: "/products?item=engine-lubricants" },
-  { label: "London Colognes", to: "/products?item=london-colognes" },
+const brandLinks = [
+  { label: "London Colognes", to: "/london-colognes" },
+  { label: "Indian Rice", to: "/indian-rice" },
+  { label: "Jasmine Rice", to: "/jasmine-rice" },
+  { label: "Engine Lubricants", to: "/lubricants" },
 ];
 
 const Header = () => {
@@ -23,10 +23,13 @@ const Header = () => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
-  const activeProductSlug = new URLSearchParams(location.search).get("item");
   const isActiveProductLink = (to) => {
-    if (!activeProductSlug) return false;
-    return to === `/products?item=${activeProductSlug}`;
+    return location.pathname.startsWith(to);
+  };
+  const isBrandsActive = () => {
+    return ["/london-colognes", "/indian-rice", "/jasmine-rice", "/lubricants"].some((path) =>
+      location.pathname.startsWith(path)
+    );
   };
 
   return (
@@ -85,11 +88,11 @@ const Header = () => {
 
           <nav className="hidden items-center gap-2 md:flex">
             {navLinks.map((link) =>
-              link.label === "Products" ? (
+              link.label === "Brands" ? (
                 <div key={link.label} className="relative group">
                   <Link
                     to={link.to}
-                    className={`flex items-center gap-2 rounded-full !px-4 !py-2 text-sm font-semibold transition ${location.pathname === "/products"
+                    className={`flex items-center gap-2 rounded-full !px-4 !py-2 text-sm font-semibold transition ${isBrandsActive()
                         ? "bg-[var(--navy)] text-white shadow-lg shadow-slate-900/10"
                         : "text-[var(--ink)] hover:bg-slate-100"
                       }`}
@@ -99,17 +102,17 @@ const Header = () => {
                   </Link>
                   <div className="absolute left-0 top-full hidden min-w-56 !pt-3 group-hover:block">
                     <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-white !p-2 shadow-[0_20px_40px_rgba(16,35,59,0.12)]">
-                      {productLinks.map((product) => (
+                      {brandLinks.map((brand) => (
                         <Link
-                          key={product.to}
-                          to={product.to}
+                          key={brand.to}
+                          to={brand.to}
                           className={`block rounded-xl !px-4 !py-3 text-sm transition ${
-                            isActiveProductLink(product.to)
+                            location.pathname === brand.to
                               ? "bg-[var(--navy)] text-white shadow-sm"
                               : "text-slate-700 hover:bg-slate-50 hover:text-[var(--navy)]"
                           }`}
                         >
-                          {product.label}
+                          {brand.label}
                         </Link>
                       ))}
                     </div>
@@ -172,7 +175,7 @@ const Header = () => {
 
             <div className="!mt-6 flex flex-col gap-2">
               {navLinks.map((link) =>
-                link.label === "Products" ? (
+                link.label === "Brands" ? (
                   <div
                     key={link.label}
                     className="rounded-2xl border border-slate-100 bg-slate-50 !p-3"
@@ -190,18 +193,18 @@ const Header = () => {
 
                     {showProductMenu && (
                       <div className="!mt-2 grid gap-2">
-                        {productLinks.map((product) => (
+                        {brandLinks.map((brand) => (
                           <Link
-                            key={product.to}
-                            to={product.to}
+                            key={brand.to}
+                            to={brand.to}
                             onClick={() => setIsOpen(false)}
                             className={`rounded-xl !px-4 !py-2.5 text-sm transition ${
-                              isActiveProductLink(product.to)
+                              location.pathname === brand.to
                                 ? "bg-[var(--navy)] text-white"
                                 : "bg-white text-slate-700 hover:bg-slate-100 hover:text-[var(--navy)]"
                             }`}
                           >
-                            {product.label}
+                            {brand.label}
                           </Link>
                         ))}
                       </div>

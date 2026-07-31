@@ -17,14 +17,23 @@ const getCategoryHighlights = (name) => {
   return highlights[name?.toLowerCase()] || ["Premium Quality Sourced", "Bulk Sourcing Available", "Export Certified"];
 };
 
-const Products = () => {
+const Products = ({ defaultCategory }) => {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const selectedCategory = slugToName(query.get("item") || "indian rice");
+  const selectedCategory = defaultCategory 
+    ? defaultCategory.toLowerCase() 
+    : slugToName(query.get("item") || "indian rice").toLowerCase();
 
   const category = categories.find(
-    (cat) => cat.name.toLowerCase() === selectedCategory.toLowerCase()
+    (cat) => cat.name.toLowerCase() === selectedCategory
   );
+  let filteredProducts = [];
+
+  if (category) {
+    filteredProducts = products.filter(
+      (product) => product.category.toLowerCase() === category.name.toLowerCase()
+    );
+  }
 
   if (!category) {
     return (
@@ -38,15 +47,18 @@ const Products = () => {
     );
   }
 
-  const filteredProducts = products.filter(
-    (product) => product.category.toLowerCase() === category.name.toLowerCase()
-  );
-
   const recommendedCategories = categories.filter(
     (cat) => cat.name.toLowerCase() !== category.name.toLowerCase()
   );
 
-  const slugify = (str) => str.toLowerCase().replace(/\s+/g, "-");
+  const getCleanRoute = (catName) => {
+    const name = catName.toLowerCase();
+    if (name.includes("indian rice")) return "/indian-rice";
+    if (name.includes("jasmine rice")) return "/jasmine-rice";
+    if (name.includes("lubricant")) return "/lubricants";
+    if (name.includes("cologne") || name.includes("perfume")) return "/london-colognes";
+    return "/products";
+  };
 
   return (
     <section id="products" className="min-h-screen bg-white text-slate-800">
@@ -168,7 +180,7 @@ const Products = () => {
           )}
         </div>
 
-        {selectedCategory.trim().toLowerCase() === "engine lubricants" && (
+        {selectedCategory.trim().includes("lubricant") && (
           <div className="!mt-8 text-center">
             <a
               href={cloudinaryAssets.brochure}
@@ -190,7 +202,7 @@ const Products = () => {
             {recommendedCategories.map((rec) => (
               <Link
                 key={rec.name}
-                to={`/products?item=${slugify(rec.name)}`}
+                to={getCleanRoute(rec.name)}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 text-center shadow-sm transition hover:shadow-md"
               >

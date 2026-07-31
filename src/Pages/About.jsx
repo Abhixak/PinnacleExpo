@@ -13,10 +13,9 @@ const About = () => {
           Welcome to Pinnacle Expo
         </h1>
         <p className="!mx-auto max-w-3xl text-sm leading-6 text-gray-600 sm:leading-7 sm:text-base lg:text-lg">
-          Your trusted partner for global export and authorized distributorship
-          of high-quality Indian & Thai rice, premium engine lubricants, and luxury fragrances.
-          Connecting tradition with innovation, we deliver excellence across
-          borders.
+          Your trusted partner for personal wear purchases, retail resale supply, global export, and authorized distributorship
+          of high-quality Indian &amp; Thai rice, premium engine lubricants, and luxury fragrances.
+          Connecting tradition with innovation, we deliver excellence across borders.
         </p>
 
         <div className="!mt-6 flex flex-col items-center rounded-2xl border border-[var(--line)] bg-white/80 !px-4 !py-4 shadow-sm sm:flex-row sm:gap-4">

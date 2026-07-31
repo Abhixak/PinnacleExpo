@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.pinnacleexpo.com/</loc>
   </url>
@@ -7,21 +8,62 @@
     <loc>https://www.pinnacleexpo.com/about</loc>
   </url>
   <url>
-    <loc>https://www.pinnacleexpo.com/products</loc>
-  </url>
-  <url>
     <loc>https://www.pinnacleexpo.com/contact</loc>
   </url>
   <url>
-    <loc>https://www.pinnacleexpo.com/products?item=indian-rice</loc>
+    <loc>https://www.pinnacleexpo.com/indian-rice</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1779085889/pinnacleexpo/categories_rice.jpg</image:loc>
+      <image:title>Indian Rice Sourcing &amp; Exports - Pinnacle Expo</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.pinnacleexpo.com/products?item=jasmine-rice</loc>
+    <loc>https://www.pinnacleexpo.com/jasmine-rice</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1779085890/pinnacleexpo/categories_basmati.jpg</image:loc>
+      <image:title>Thai Jasmine Rice Sourcing &amp; Exports - Pinnacle Expo</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.pinnacleexpo.com/products?item=engine-lubricants</loc>
+    <loc>https://www.pinnacleexpo.com/lubricants</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784294956/pinnacleexpo/categories_engine_lubricants.jpg</image:loc>
+      <image:title>Engine Lubricants Supplier - Pinnacle Expo</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.pinnacleexpo.com/products?item=london-colognes</loc>
+    <loc>https://www.pinnacleexpo.com/london-colognes</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784286447/pinnacleexpo/categories_london_colognes.png</image:loc>
+      <image:title>London Colognes Premium Perfumes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pinnacleexpo.com/london-colognes/sensory</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784286185/pinnacleexpo/products_sensory.png</image:loc>
+      <image:title>Sensory Extrait de Parfum - London Colognes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pinnacleexpo.com/london-colognes/floral</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784286187/pinnacleexpo/products_floral.png</image:loc>
+      <image:title>Floral Extrait de Parfum - London Colognes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pinnacleexpo.com/london-colognes/untamed</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784286184/pinnacleexpo/products_untamed.png</image:loc>
+      <image:title>Untamed Extrait de Parfum - London Colognes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.pinnacleexpo.com/london-colognes/affection</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dljubulyn/image/upload/v1784286183/pinnacleexpo/products_affection.png</image:loc>
+      <image:title>Affection Extrait de Parfum - London Colognes</image:title>
+    </image:image>
   </url>
 </urlset>

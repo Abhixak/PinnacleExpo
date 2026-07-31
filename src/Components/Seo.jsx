@@ -9,32 +9,32 @@ const DEFAULT_IMAGE =
 
 const routeMeta = {
   "/": {
-    title: "Pinnacle Expo | Export Rice, Engine Lubricants & London Colognes",
+    title: "Pinnacle Expo Mohali | Export Rice, Lubricants & London Colognes India",
     description:
-      "Pinnacle Expo (Pinnacle Group Mohali) is a leading export supplier of Indian basmati rice, Thai jasmine rice, premium engine lubricants, and London Colognes perfumes for single or bulk orders.",
+      "Pinnacle Expo (Pinnacle Group Mohali Phase 11) is Chandigarh Tricity's leading export supplier of Indian basmati rice, Thai jasmine rice, premium engine lubricants, and London Colognes. Buy single or bulk orders locally in Mohali & Chandigarh.",
     keywords:
-      "Pinnacle Expo Mohali, Pinnacle Group, export rice supplier India, Thai jasmine rice exporter, Indian basmati rice, engine lubricants supplier, London Colognes perfumes, wholesale perfumes, bulk perfume orders, single and bulk orders India",
+      "Pinnacle Expo Mohali, perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, Pinnacle Group Chandigarh, export rice supplier India, basmati rice Mohali, engine lubricants Chandigarh, London Colognes Chandigarh, wholesale perfumes Punjab, buy perfumes Mohali, single and bulk orders tricity, import export companies Mohali Phase 11",
   },
   "/about": {
-    title: "About Us | Pinnacle Expo",
+    title: "About Pinnacle Expo | Export Company in Mohali Chandigarh",
     description:
-      "Learn about Pinnacle Expo (Pinnacle Group), your trusted export partner in Mohali, India, for premium rice, engine lubricants, and London Colognes fragrances with a focus on global wholesale supply.",
+      "Learn about Pinnacle Expo (Pinnacle Group), your trusted export & local supply partner based in SCF 124 Phase 11 Mohali, servicing Chandigarh Tricity and global markets with rice, lubricants, and fragrances.",
     keywords:
-      "about Pinnacle Expo, export company Mohali, Pinnacle Group Punjab, rice exporter India, lubricant supplier, perfume supplier",
+      "about Pinnacle Expo, export company Mohali, perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, Pinnacle Group Punjab, Chandigarh tricity exporters, rice exporter India, lubricant supplier Punjab, perfume supplier Mohali",
   },
   "/contact": {
-    title: "Contact Us | Pinnacle Expo",
+    title: "Contact Pinnacle Expo Mohali | Chandigarh Sales Office",
     description:
-      "Get in touch with Pinnacle Expo in Mohali, India, for export enquiries, bulk rice supply, Thai jasmine rice, engine lubricants distribution, and London Colognes wholesale/bulk orders.",
+      "Contact Pinnacle Expo in Phase 11 Mohali. Call +91 92163 99808 for export enquiries, bulk basmati rice, engine lubricants distribution, and local or wholesale London Colognes fragrance booking in Chandigarh tricity.",
     keywords:
-      "contact Pinnacle Expo, export company contact Mohali, rice export enquiry, lubricant distribution, London Colognes wholesale, Pinnacle Expo phone number",
+      "contact Pinnacle Expo, export company contact Mohali, office phase 11 Mohali, perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, Chandigarh tricity import export, rice export enquiry, lubricant distribution Punjab, London Colognes wholesale Mohali",
   },
   "/products": {
-    title: "Our Products | Pinnacle Expo",
+    title: "Buy Premium Products in Mohali Chandigarh | Pinnacle Expo",
     description:
-      "Explore premium Indian basmati rice, Thai jasmine rice, engine lubricants, and London Colognes fragrances available for single or bulk export orders from Pinnacle Expo.",
+      "Shop premium Indian basmati rice, Thai jasmine rice, engine oils, and London Colognes. Available for single home delivery in Mohali/Chandigarh and bulk export containers.",
     keywords:
-      "export products, Thai jasmine rice bulk, Indian basmati rice wholesale, engine lubricants, London Colognes perfumes, single and bulk order fragrances",
+      "perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, buy perfumes Mohali, buy rice Chandigarh, lubricants distributor Punjab, export products India, Thai jasmine rice bulk, Indian basmati rice wholesale, London Colognes retail Mohali",
   },
 };
 
@@ -58,24 +58,63 @@ const Seo = () => {
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const item = searchParams.get("item");
-    const route = routeMeta[location.pathname] ?? routeMeta["/"];
+    const pathname = location.pathname;
 
-    let pageTitle = route.title;
-    let description = route.description;
-    let keywords = route.keywords;
-    let canonicalPath = location.pathname;
-    let productName = "";
+    let pageTitle = "";
+    let description = "";
+    let keywords = "";
+    let canonicalPath = pathname;
 
-    if (location.pathname === "/products" && item) {
-      productName = item
+    // Detect if we are on a perfume detail page
+    const perfumeMatch = pathname.match(/^\/london-colognes\/([^/]+)/);
+    const isLondonColognesBrandPage = pathname === "/london-colognes";
+    const isIndianRicePage = pathname === "/indian-rice";
+    const isJasmineRicePage = pathname === "/jasmine-rice";
+    const isLubricantsPage = pathname === "/lubricants";
+
+    let activePerfume = null;
+
+    if (perfumeMatch) {
+      const perfumeSlug = perfumeMatch[1];
+      activePerfume = products.find(
+        (p) => p.slug === perfumeSlug && p.category === "London Colognes"
+      );
+    }
+
+    if (activePerfume) {
+      pageTitle = `Buy ${activePerfume.name} Perfume in Mohali Chandigarh | London Colognes`;
+      description = `Buy ${activePerfume.name} by London Colognes in Mohali, Chandigarh, and across India. 40% oil concentration Extrait de Parfum with 10-12 hours of longevity. Perfect for personal use, gifting, or retail resale.`;
+      keywords = `${activePerfume.slug} perfume mohali, buy ${activePerfume.slug} chandigarh, perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, luxury perfumes chandigarh, best perfume shop in mohali, designer fragrances panchkula, top perfume brands in chandigarh, unisex fragrances chandigarh, gifting items in chandigarh, premium perfume store mohali, custom fragrance gifting india, import export perfumes punjab, perfume distributor mohali phase 11, wholesale perfume supplier chandigarh, original perfumes online india, perfume gift packs chandigarh, scent boutique mohali, attar and perfumes chandigarh, luxury lifestyle accessories mohali, wedding gifts chandigarh tricity, corporate gifts mohali, extrait de parfum india online, long lasting fragrance shop chandigarh, branded scents mohali, luxury perfume gifts punjab, french perfumes chandigarh, london colognes price india, mens cologne shop chandigarh, womens perfume boutique mohali, luxury fragrance wholesale india, perfumes shop in phase 11 mohali, premium scents chandigarh, fashion trends chandigarh tricity`;
+    } else if (isLondonColognesBrandPage) {
+      pageTitle = `London Colognes Mohali Chandigarh | Buy Luxury Perfumes`;
+      description = `Buy London Colognes for personal wear, retail resale, or bulk export distribution in Mohali Phase 11 & Chandigarh. Find long-lasting 40% Extrait de Parfum in India.`;
+      keywords = `perfumes, chandigarh most famous perfumes, fashion accessories in chandigarh, mohali, london colognes mohali, perfumes chandigarh, buy perfume online mohali, luxury perfumes tricity, long lasting scents chandigarh, sensory perfume mohali, floral perfume chandigarh, untamed cologne mohali, affection cologne punjab, wholesale luxury perfumes, perfume export india, bulk colognes, luxury perfumes chandigarh, best perfume shop in mohali, designer fragrances panchkula, top perfume brands in chandigarh, unisex fragrances chandigarh, gifting items in chandigarh, premium perfume store mohali, custom fragrance gifting india, import export perfumes punjab, perfume distributor mohali phase 11, wholesale perfume supplier chandigarh, original perfumes online india, perfume gift packs chandigarh, scent boutique mohali, attar and perfumes chandigarh, luxury lifestyle accessories mohali, wedding gifts chandigarh tricity, corporate gifts mohali, extrait de parfum india online, long lasting fragrance shop chandigarh, branded scents mohali, luxury perfume gifts punjab, french perfumes chandigarh, london colognes price india, mens cologne shop chandigarh, womens perfume boutique mohali, luxury fragrance wholesale india, perfumes shop in phase 11 mohali, premium scents chandigarh, fashion trends chandigarh tricity`;
+    } else if (isIndianRicePage) {
+      pageTitle = `Indian Basmati Rice Exporter Mohali | Pinnacle Expo`;
+      description = `Authorized exporter and supplier of high-quality Indian Basmati (1121, 1509, 1718, Pusa) and Non-Basmati (Sugandha, Sona Masoori, PR11) rice. Bulk container shipments and regional distribution from Mohali, Punjab.`;
+      keywords = `basmati rice supplier punjab, indian basmati rice exporter mohali, basmati 1121 wholesale chandigarh, sona masoori supplier, sharbati rice bulk, Indian rice exporter, Pinnacle Expo Mohali`;
+    } else if (isJasmineRicePage) {
+      pageTitle = `Jasmine Rice Importer & Supplier Mohali Chandigarh | Pinnacle Expo`;
+      description = `Premium aromatic Thai Jasmine rice sourced for international export and local distribution in Chandigarh tricity. Top-grade fragrant rice for bulk supply or retail.`;
+      keywords = `jasmine rice supplier mohali, jasmine rice wholesale chandigarh, premium fragrant rice supplier, aromatic jasmine rice bulk, Pinnacle Expo jasmine rice`;
+    } else if (isLubricantsPage) {
+      pageTitle = `Engine Lubricants Distributor Mohali Chandigarh | Pinnacle Expo`;
+      description = `Automotive and industrial engine lubricants supplier in Mohali, Punjab. Premium synthetic motor oil, ATF gear oils, and OEM lubricants for regional distribution and export.`;
+      keywords = `lubricants distributor mohali, engine oil supplier chandigarh, synthetic motor oil exporter, industrial lubricants wholesale, atf oil bulk, Pinnacle Expo lubricants`;
+    } else if (pathname === "/products" && item) {
+      const productName = item
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-
-      pageTitle = `${productName} | ${SITE_NAME}`;
-      description = `Buy premium ${productName.toLowerCase()} online at ${SITE_NAME}. Available for single and bulk export orders with worldwide shipping.`;
-      keywords = `${productName.toLowerCase()} wholesale, bulk ${productName.toLowerCase()}, export ${productName.toLowerCase()}, Pinnacle Expo Mohali, engine lubricants, London Colognes`;
-      canonicalPath = `${location.pathname}?item=${item}`;
+      pageTitle = `Buy ${productName} in Mohali Chandigarh | ${SITE_NAME}`;
+      description = `Buy premium ${productName.toLowerCase()} online at ${SITE_NAME} Mohali. Available for single and bulk export orders across India with regional distribution.`;
+      keywords = `${productName.toLowerCase()} mohali, buy ${productName.toLowerCase()} chandigarh, ${productName.toLowerCase()} wholesale, bulk ${productName.toLowerCase()}, export ${productName.toLowerCase()}, Pinnacle Expo Mohali`;
+      canonicalPath = `${pathname}?item=${item}`;
+    } else {
+      const route = routeMeta[pathname] ?? routeMeta["/"];
+      pageTitle = route.title;
+      description = route.description;
+      keywords = route.keywords;
     }
 
     document.title = pageTitle;
@@ -111,7 +150,7 @@ const Seo = () => {
       document.head.appendChild(schema);
     }
 
-    const isLondonColognes = location.pathname === "/products" && item === "london-colognes";
+    const isLondonColognes = isLondonColognesBrandPage || Boolean(activePerfume);
 
     const graph = [
       {
@@ -138,17 +177,23 @@ const Seo = () => {
       {
         "@type": "LocalBusiness",
         "@id": isLondonColognes 
-          ? `${SITE_URL}${canonicalPath}/#localbusiness`
+          ? `${SITE_URL}/london-colognes/#localbusiness`
           : `${SITE_URL}/#localbusiness`,
-        name: isLondonColognes ? "London Colognes" : "Pinnacle Group",
-        url: isLondonColognes ? `${SITE_URL}${canonicalPath}` : SITE_URL,
+        name: isLondonColognes ? "London Colognes" : SITE_NAME,
+        url: isLondonColognes ? `${SITE_URL}/london-colognes` : SITE_URL,
         logo: DEFAULT_IMAGE,
         image: DEFAULT_IMAGE,
         description: isLondonColognes
           ? "London Colognes offers premium, long-lasting fragrances designed to evoke elegance, sophistication, and raw energy."
-          : "Pinnacle Group (Pinnacle Expo) is a premium global exporter of high-quality Indian & Thai rice, engine lubricants, and luxury fragrances.",
+          : "Pinnacle Expo is a premium global exporter of high-quality Indian & Thai rice, engine lubricants, and luxury fragrances.",
         telephone: "+91 9216399808",
         priceRange: "$$",
+        areaServed: [
+          { "@type": "AdministrativeArea", "name": "Mohali" },
+          { "@type": "AdministrativeArea", "name": "Chandigarh" },
+          { "@type": "AdministrativeArea", "name": "Panchkula" },
+          { "@type": "Country", "name": "India" }
+        ],
         hasMap: "https://maps.app.goo.gl/p1RB4rmxT3u5guAr9",
         sameAs: [
           "https://maps.app.goo.gl/p1RB4rmxT3u5guAr9"
@@ -185,44 +230,77 @@ const Seo = () => {
       }
     ];
 
-    if (location.pathname === "/products" && item) {
-      const categoryName = item.replace(/-/g, " ");
-      const categoryProducts = products.filter(
-        (p) => p.category.toLowerCase() === categoryName.toLowerCase()
-      );
-
-      if (categoryProducts.length > 0) {
-        graph.push({
-          "@type": "ItemList",
-          "@id": `${SITE_URL}${canonicalPath}/#itemlist`,
-          name: `${productName} Sourced Products`,
-          description: `List of premium ${productName.toLowerCase()} products offered by Pinnacle Expo.`,
-          numberOfItems: categoryProducts.length,
-          itemListElement: categoryProducts.map((prod, idx) => ({
-            "@type": "ListItem",
-            position: idx + 1,
-            item: {
-              "@type": "Product",
-              name: prod.name,
-              image: prod.image,
-              description: prod.description,
-              category: prod.category,
-              offers: {
-                "@type": "AggregateOffer",
-                priceCurrency: "INR",
-                offers: [
-                  {
-                    "@type": "Offer",
-                    url: `${SITE_URL}/contact`,
-                    itemCondition: "https://schema.org/NewCondition",
-                    availability: "https://schema.org/InStock",
-                  }
-                ]
-              }
+    if (activePerfume) {
+      // Add Product Schema
+      graph.push({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `${SITE_URL}${canonicalPath}/#product`,
+        name: activePerfume.name,
+        image: activePerfume.image,
+        description: activePerfume.description,
+        brand: {
+          "@type": "Brand",
+          name: "London Colognes",
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "INR",
+          lowPrice: "1999",
+          highPrice: "3499",
+          offerCount: "1",
+          offers: [
+            {
+              "@type": "Offer",
+              url: `${SITE_URL}/contact`,
+              itemCondition: "https://schema.org/NewCondition",
+              availability: "https://schema.org/InStock",
             }
-          }))
-        });
-      }
+          ]
+        }
+      });
+
+      // Add FAQ Schema
+      graph.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}${canonicalPath}/#faq`,
+        mainEntity: activePerfume.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      });
+
+      // Add Breadcrumb List
+      graph.push({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}${canonicalPath}/#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "London Colognes",
+            item: `${SITE_URL}/london-colognes`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: activePerfume.name,
+            item: `${SITE_URL}${canonicalPath}`,
+          },
+        ],
+      });
     }
 
     schema.textContent = JSON.stringify(

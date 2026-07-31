@@ -71,13 +71,28 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/products" className="hover:text-white">
-                Products
+              <a href="/about" className="hover:text-white">
+                About Us
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-white">
-                About Us
+              <a href="/london-colognes" className="hover:text-white">
+                London Colognes
+              </a>
+            </li>
+            <li>
+              <a href="/indian-rice" className="hover:text-white">
+                Indian Rice
+              </a>
+            </li>
+            <li>
+              <a href="/jasmine-rice" className="hover:text-white">
+                Jasmine Rice
+              </a>
+            </li>
+            <li>
+              <a href="/lubricants" className="hover:text-white">
+                Engine Lubricants
               </a>
             </li>
             <li>

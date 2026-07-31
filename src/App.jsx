@@ -9,6 +9,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Products from "./Pages/Products";
 import Contact from "./Pages/Contact";
+import LondonColognes from "./Pages/LondonColognes";
+import PerfumeDetail from "./Pages/PerfumeDetail";
 import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
@@ -22,6 +24,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/london-colognes" element={<LondonColognes />} />
+        <Route path="/london-colognes/:perfumeName" element={<PerfumeDetail />} />
+        <Route path="/indian-rice" element={<Products defaultCategory="Indian Rice" />} />
+        <Route path="/jasmine-rice" element={<Products defaultCategory="Jasmine Rice" />} />
+        <Route path="/lubricants" element={<Products defaultCategory="Engine Lubricants" />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

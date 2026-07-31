@@ -43,7 +43,7 @@ const Home = () => {
                   Export-ready sourcing
                 </p>
                 <p className="!mt-1 text-[11px] leading-5 text-slate-600 sm:text-xs sm:leading-6">
-                  Built for bulk trade, distributor orders, and repeat supply.
+                  Book individual wear, retail resale, or bulk export orders.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--line)] bg-white/85 !p-3 shadow-sm sm:!p-4">

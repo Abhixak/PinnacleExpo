@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CategoryGrid from "../Components/CategoryGrid";
 import categories from "../data/categories";
 import productsData from "../data/products";
@@ -7,12 +8,30 @@ import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Categories = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
 
-  const handleCategoryClick = (cat) => {
-    setSelectedCategory(cat === selectedCategory ? null : cat);
+  const handleCategoryClick = (catName) => {
+    const name = catName.toLowerCase();
+    if (name.includes("cologne") || name.includes("perfume")) {
+      navigate("/london-colognes");
+    } else if (name.includes("indian rice")) {
+      navigate("/indian-rice");
+    } else if (name.includes("jasmine rice")) {
+      navigate("/jasmine-rice");
+    } else if (name.includes("lubricant")) {
+      navigate("/lubricants");
+    }
+  };
+
+  const handleProductClick = (prod) => {
+    if (prod.category === "London Colognes") {
+      navigate(`/london-colognes/${prod.slug}`);
+    } else {
+      setSelectedProduct(prod);
+    }
   };
 
   const handleViewMore = (categoryName) => {
@@ -82,7 +101,7 @@ const Categories = () => {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        onClick={() => setSelectedProduct(prod)}
+                        onClick={() => handleProductClick(prod)}
                         className="cursor-pointer rounded-2xl bg-[#faf7ff] !p-3 text-center shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md sm:!p-4"
                       >
                         <img
